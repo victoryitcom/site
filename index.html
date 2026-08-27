@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Victory IT | Technology Risk & Advisory</title>
+
 <meta name="description" content="Victory IT provides independent technology risk, cybersecurity, third-party risk, and emerging technology advisory services.">
 
 <style>
@@ -14,10 +16,16 @@
   --muted:#667382;
   --line:#dfe6ed;
   --soft:#f5f8fb;
-  --white:#fff;
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
 body{
   margin:0;
   font-family:Inter,Arial,sans-serif;
@@ -25,9 +33,16 @@ body{
   background:#fff;
   line-height:1.55;
 }
-a{text-decoration:none;color:inherit}
 
-/* Fixed centered header */
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+/* =========================
+   FIXED CENTERED HEADER
+========================= */
+
 .site-header{
   position:fixed;
   top:0;
@@ -39,14 +54,15 @@ a{text-decoration:none;color:inherit}
   border-bottom:1px solid var(--line);
   backdrop-filter:blur(12px);
 }
+
 .header-inner{
   width:100%;
   height:100%;
-  margin:0 auto;
   display:flex;
   align-items:center;
   justify-content:center;
 }
+
 .brand{
   display:flex;
   align-items:center;
@@ -54,12 +70,14 @@ a{text-decoration:none;color:inherit}
   gap:10px;
   height:100%;
 }
+
 .brand-figure{
-  width:auto;
   height:68px;
+  width:54px;
   display:block;
   object-fit:contain;
 }
+
 .brand-name{
   font-family:Georgia,"Times New Roman",serif;
   font-size:27px;
@@ -68,23 +86,41 @@ a{text-decoration:none;color:inherit}
   color:#17649a;
   white-space:nowrap;
 }
+
+/* Navigation intentionally hidden so logo remains centered */
+
 .navlinks{
   display:none;
 }
 
-main{padding-top:88px}
+main{
+  padding-top:88px;
+}
+
 .container{
   width:min(1120px,calc(100% - 44px));
   margin:auto;
 }
 
-/* Hero */
+/* =========================
+   HERO
+========================= */
+
 .hero{
   padding:105px 0 92px;
   background:
-    radial-gradient(circle at 85% 15%,rgba(8,116,189,.12),transparent 31%),
-    linear-gradient(180deg,#fff 0%,#f8fbfd 100%);
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(8,116,189,.12),
+      transparent 31%
+    ),
+    linear-gradient(
+      180deg,
+      #fff 0%,
+      #f8fbfd 100%
+    );
 }
+
 .eyebrow{
   font-size:13px;
   font-weight:700;
@@ -93,6 +129,7 @@ main{padding-top:88px}
   color:var(--blue);
   margin-bottom:18px;
 }
+
 .hero h1{
   font-size:clamp(45px,6vw,72px);
   line-height:1.02;
@@ -100,18 +137,24 @@ main{padding-top:88px}
   max-width:850px;
   margin:0 0 25px;
 }
-.hero h1 span{color:var(--blue)}
+
+.hero h1 span{
+  color:var(--blue);
+}
+
 .hero p{
   font-size:20px;
   color:var(--muted);
   max-width:710px;
   margin:0 0 35px;
 }
+
 .buttons{
   display:flex;
   gap:13px;
   flex-wrap:wrap;
 }
+
 .btn{
   display:inline-flex;
   align-items:center;
@@ -121,30 +164,43 @@ main{padding-top:88px}
   font-weight:700;
   font-size:15px;
 }
+
 .primary{
   background:var(--blue);
   color:#fff;
   box-shadow:0 7px 20px rgba(8,116,189,.18);
 }
-.primary:hover{background:var(--blue-dark)}
+
+.primary:hover{
+  background:var(--blue-dark);
+}
+
 .secondary{
   border:1px solid #c9d3dc;
   background:#fff;
 }
-.secondary:hover{border-color:var(--ink)}
 
-/* Focus bar */
+.secondary:hover{
+  border-color:var(--ink);
+}
+
+/* =========================
+   FOCUS BAR
+========================= */
+
 .trust{
   padding:28px 0;
   border-bottom:1px solid var(--line);
   background:#fff;
 }
+
 .trustrow{
   display:flex;
   justify-content:space-between;
   gap:25px;
   flex-wrap:wrap;
 }
+
 .trustitem{
   font-size:12px;
   color:#7a8793;
@@ -153,37 +209,53 @@ main{padding-top:88px}
   font-weight:700;
 }
 
-/* Sections */
-.section{padding:100px 0}
-.section.alt{background:var(--soft)}
+/* =========================
+   SECTIONS
+========================= */
+
+.section{
+  padding:100px 0;
+}
+
+.section.alt{
+  background:var(--soft);
+}
+
 .sectionhead{
   max-width:700px;
   margin-bottom:50px;
 }
+
 .sectionhead h2{
   font-size:42px;
   line-height:1.1;
   letter-spacing:-.03em;
   margin:0 0 15px;
 }
+
 .sectionhead p{
   color:var(--muted);
   font-size:17px;
   margin:0;
 }
 
-/* Services */
+/* =========================
+   SERVICES
+========================= */
+
 .cards{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:20px;
 }
+
 .card{
   border:1px solid var(--line);
   border-radius:12px;
   padding:30px;
   background:#fff;
 }
+
 .icon{
   width:42px;
   height:42px;
@@ -195,41 +267,67 @@ main{padding-top:88px}
   font-weight:800;
   margin-bottom:23px;
 }
-.card h3{margin:0 0 10px;font-size:20px}
-.card p{color:var(--muted);margin:0;font-size:15px}
+
+.card h3{
+  margin:0 0 10px;
+  font-size:20px;
+}
+
+.card p{
+  color:var(--muted);
+  margin:0;
+  font-size:15px;
+}
+
 .card ul{
   padding-left:18px;
   color:var(--muted);
   font-size:14px;
   margin:18px 0 0;
 }
-.card li{margin:7px 0}
 
-/* Approach */
+.card li{
+  margin:7px 0;
+}
+
+/* =========================
+   APPROACH
+========================= */
+
 .split{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:75px;
   align-items:center;
 }
+
 .quote{
   border-left:3px solid var(--blue);
   padding-left:22px;
   color:#4c5966;
   font-size:19px;
 }
+
 .checklist{
   display:grid;
   gap:15px;
   margin-top:27px;
 }
+
 .check{
   display:flex;
   gap:12px;
   align-items:flex-start;
 }
-.check b{color:var(--blue)}
-.check span{color:#52606d}
+
+.check b{
+  color:var(--blue);
+}
+
+.check span{
+  color:#52606d;
+}
+
 .panel{
   background:#0e1b27;
   color:#fff;
@@ -241,31 +339,49 @@ main{padding-top:88px}
   justify-content:space-between;
   box-shadow:0 20px 50px rgba(15,30,45,.12);
 }
-.panel .eyebrow{color:#79c5f2}
+
+.panel .eyebrow{
+  color:#79c5f2;
+}
+
 .panel h3{
   font-size:33px;
   line-height:1.1;
   margin:0 0 16px;
   letter-spacing:-.025em;
 }
-.panel p{color:#b7c5d1;margin:0}
 
-/* About */
+.panel p{
+  color:#b7c5d1;
+  margin:0;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
 .about{
   display:grid;
   grid-template-columns:1.1fr .9fr;
   gap:80px;
 }
+
 .about h2{
   font-size:42px;
   line-height:1.1;
   margin:0 0 18px;
 }
-.about p{color:var(--muted);font-size:17px}
+
+.about p{
+  color:var(--muted);
+  font-size:17px;
+}
+
 .credentials{
   border-top:1px solid var(--line);
   padding-top:25px;
 }
+
 .credentials strong{
   display:block;
   font-size:13px;
@@ -274,33 +390,53 @@ main{padding-top:88px}
   color:#687581;
   margin-bottom:8px;
 }
-.credentials span{color:#4c5966}
 
-/* Contact */
-.contact{background:var(--soft)}
+.credentials span{
+  color:#4c5966;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+  background:var(--soft);
+}
+
 .contactbox{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:50px;
   align-items:center;
 }
+
 .contact h2{
   font-size:42px;
   line-height:1.08;
   margin:0 0 16px;
 }
-.contact p{color:var(--muted);font-size:17px}
+
+.contact p{
+  color:var(--muted);
+  font-size:17px;
+}
+
 .contactdetails{
   background:#fff;
   border:1px solid var(--line);
   border-radius:13px;
   padding:30px;
 }
+
 .contactdetails div{
   padding:13px 0;
   border-bottom:1px solid var(--line);
 }
-.contactdetails div:last-child{border-bottom:0}
+
+.contactdetails div:last-child{
+  border-bottom:0;
+}
+
 .contactdetails small{
   display:block;
   text-transform:uppercase;
@@ -310,15 +446,23 @@ main{padding-top:88px}
   font-size:11px;
   margin-bottom:3px;
 }
-.contactdetails a{color:var(--blue);font-weight:700}
 
-/* Footer */
+.contactdetails a{
+  color:var(--blue);
+  font-weight:700;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
 footer{
   padding:30px 0;
   color:#7b8792;
   font-size:13px;
   border-top:1px solid var(--line);
 }
+
 .footerrow{
   display:flex;
   justify-content:space-between;
@@ -326,45 +470,96 @@ footer{
   flex-wrap:wrap;
 }
 
-/* Mobile */
+/* =========================
+   MOBILE
+========================= */
+
 @media(max-width:800px){
-  .site-header{height:88px}
-  .header-inner{width:100%}
-  .brand{gap:8px}
+
+  .site-header{
+    height:88px;
+  }
+
+  .header-inner{
+    width:100%;
+  }
+
+  .brand{
+    gap:8px;
+  }
+
   .brand-figure{
     height:68px;
     width:54px;
   }
+
   .brand-name{
     font-size:27px;
   }
-  main{padding-top:88px}
-  .hero{padding:70px 0}
-  .hero h1{font-size:48px}
-  .hero p{font-size:18px}
-  .section{padding:70px 0}
+
+  main{
+    padding-top:88px;
+  }
+
+  .hero{
+    padding:70px 0;
+  }
+
+  .hero h1{
+    font-size:48px;
+  }
+
+  .hero p{
+    font-size:18px;
+  }
+
+  .section{
+    padding:70px 0;
+  }
+
   .sectionhead h2,
   .about h2,
-  .contact h2{font-size:34px}
+  .contact h2{
+    font-size:34px;
+  }
+
   .cards,
   .split,
   .about,
-  .contactbox{grid-template-columns:1fr}
-  .split,.about{gap:40px}
-  .panel{padding:35px}
+  .contactbox{
+    grid-template-columns:1fr;
+  }
+
+  .split,
+  .about{
+    gap:40px;
+  }
+
+  .panel{
+    padding:35px;
+  }
+
   .trustrow{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:18px;
   }
 }
+
 @media(max-width:380px){
+
   .brand-figure{
     height:62px;
     width:49px;
   }
-  .brand-name{font-size:24px}
-  .hero h1{font-size:43px}
+
+  .brand-name{
+    font-size:24px;
+  }
+
+  .hero h1{
+    font-size:43px;
+  }
 }
 </style>
 </head>
@@ -373,18 +568,34 @@ footer{
 
 <header class="site-header">
   <div class="header-inner">
+
     <a href="#top" class="brand" aria-label="Victory IT home">
-      <img src="victory-figure.png" alt="Victory IT figure" class="brand-figure">
+
+      <!-- victory-figure.png must be in the ROOT folder -->
+      <img
+        src="victory-figure.png"
+        alt="Victory IT"
+        class="brand-figure"
+      >
+
       <span class="brand-name">Victory IT</span>
+
     </a>
+
   </div>
 </header>
 
+
 <main id="top">
+
+<!-- HERO -->
 
 <section class="hero">
   <div class="container">
-    <div class="eyebrow">Independent technology advisory</div>
+
+    <div class="eyebrow">
+      Independent technology advisory
+    </div>
 
     <h1>
       Make better technology decisions.
@@ -398,86 +609,157 @@ footer{
     </p>
 
     <div class="buttons">
-      <a class="btn primary" href="#contact">Start a conversation</a>
-      <a class="btn secondary" href="#services">Explore services</a>
+
+      <a class="btn primary" href="#contact">
+        Start a conversation
+      </a>
+
+      <a class="btn secondary" href="#services">
+        Explore services
+      </a>
+
     </div>
+
   </div>
 </section>
+
+
+<!-- FOCUS -->
 
 <section class="trust">
+
   <div class="container trustrow">
-    <div class="trustitem">Technology Risk</div>
-    <div class="trustitem">Cybersecurity</div>
-    <div class="trustitem">Third-Party Risk</div>
-    <div class="trustitem">Emerging Technology</div>
+
+    <div class="trustitem">
+      Technology Risk
+    </div>
+
+    <div class="trustitem">
+      Cybersecurity
+    </div>
+
+    <div class="trustitem">
+      Third-Party Risk
+    </div>
+
+    <div class="trustitem">
+      Emerging Technology
+    </div>
+
   </div>
+
 </section>
 
+
+<!-- SERVICES -->
+
 <section class="section" id="services">
+
   <div class="container">
 
     <div class="sectionhead">
-      <div class="eyebrow">What Victory IT does</div>
-      <h2>Practical expertise for complex technology decisions.</h2>
+
+      <div class="eyebrow">
+        What Victory IT does
+      </div>
+
+      <h2>
+        Practical expertise for complex technology decisions.
+      </h2>
+
       <p>
         Independent consulting focused on understanding the technology,
         identifying the risk, and giving decision-makers a clear path forward.
       </p>
+
     </div>
+
 
     <div class="cards">
 
       <div class="card">
+
         <div class="icon">01</div>
-        <h3>Technology Risk</h3>
+
+        <h3>
+          Technology Risk
+        </h3>
+
         <p>
           Assess technology and business processes to identify meaningful
           risks, control gaps, and practical mitigation opportunities.
         </p>
+
         <ul>
           <li>Risk assessments</li>
           <li>Control evaluation</li>
           <li>Risk and remediation planning</li>
         </ul>
+
       </div>
 
+
       <div class="card">
+
         <div class="icon">02</div>
-        <h3>Third-Party Risk</h3>
+
+        <h3>
+          Third-Party Risk
+        </h3>
+
         <p>
           Evaluate vendors, SaaS platforms, applications, and technology
           providers before and after they become part of the environment.
         </p>
+
         <ul>
           <li>Vendor assessments</li>
           <li>Security and compliance review</li>
           <li>Remediation tracking</li>
         </ul>
+
       </div>
 
+
       <div class="card">
+
         <div class="icon">03</div>
-        <h3>AI & Emerging Technology</h3>
+
+        <h3>
+          AI & Emerging Technology
+        </h3>
+
         <p>
           Help organizations think through the security, privacy, governance,
           and operational risks that come with adopting new technology.
         </p>
+
         <ul>
           <li>AI risk considerations</li>
           <li>Emerging technology review</li>
           <li>Governance and controls</li>
         </ul>
+
       </div>
 
     </div>
+
   </div>
+
 </section>
 
+
+<!-- APPROACH -->
+
 <section class="section alt" id="approach">
+
   <div class="container split">
 
     <div>
-      <div class="eyebrow">The Victory IT approach</div>
+
+      <div class="eyebrow">
+        The Victory IT approach
+      </div>
 
       <div class="quote">
         “Technology moves quickly. Risk decisions shouldn't have to.”
@@ -487,30 +769,37 @@ footer{
 
         <div class="check">
           <b>✓</b>
+
           <span>
             <strong>Independent perspective.</strong>
             Clear advice without a product to sell.
           </span>
         </div>
 
+
         <div class="check">
           <b>✓</b>
+
           <span>
             <strong>Business-minded.</strong>
             Focus on risk that matters, not paperwork for its own sake.
           </span>
         </div>
 
+
         <div class="check">
           <b>✓</b>
+
           <span>
             <strong>Practical outcomes.</strong>
             Findings translate into actions teams can actually take.
           </span>
         </div>
 
+
         <div class="check">
           <b>✓</b>
+
           <span>
             <strong>Built for change.</strong>
             Designed for environments adopting new platforms, vendors,
@@ -519,11 +808,17 @@ footer{
         </div>
 
       </div>
+
     </div>
 
+
     <div class="panel">
+
       <div>
-        <div class="eyebrow">A focused advisory practice</div>
+
+        <div class="eyebrow">
+          A focused advisory practice
+        </div>
 
         <h3>
           Senior-level attention without unnecessary layers.
@@ -533,23 +828,39 @@ footer{
           Victory IT is intentionally lean, allowing engagements to stay
           focused, responsive, and close to the actual decision-makers.
         </p>
+
       </div>
 
-      <a class="btn primary" href="#contact" style="align-self:flex-start">
+      <a
+        class="btn primary"
+        href="#contact"
+        style="align-self:flex-start"
+      >
         Discuss your needs
       </a>
+
     </div>
 
   </div>
+
 </section>
 
+
+<!-- ABOUT -->
+
 <section class="section" id="about">
+
   <div class="container about">
 
     <div>
-      <div class="eyebrow">About Victory IT</div>
 
-      <h2>Independent. Experienced. Focused.</h2>
+      <div class="eyebrow">
+        About Victory IT
+      </div>
+
+      <h2>
+        Independent. Experienced. Focused.
+      </h2>
 
       <p>
         Victory IT is a boutique technology consulting and advisory practice
@@ -562,11 +873,15 @@ footer{
         experienced perspective on technology decisions, controls,
         vendors, and risk.
       </p>
+
     </div>
+
 
     <div class="credentials">
 
-      <strong>Core areas</strong>
+      <strong>
+        Core areas
+      </strong>
 
       <span>
         Technology risk • Third-party risk • Cybersecurity •
@@ -576,7 +891,9 @@ footer{
 
       <br><br>
 
-      <strong>Engagements</strong>
+      <strong>
+        Engagements
+      </strong>
 
       <span>
         Advisory • Assessments • Project-based consulting • Technology reviews
@@ -585,15 +902,25 @@ footer{
     </div>
 
   </div>
+
 </section>
 
+
+<!-- CONTACT -->
+
 <section class="section contact" id="contact">
+
   <div class="container contactbox">
 
     <div>
-      <div class="eyebrow">Let's connect</div>
 
-      <h2>Have a technology question?</h2>
+      <div class="eyebrow">
+        Let's connect
+      </div>
+
+      <h2>
+        Have a technology question?
+      </h2>
 
       <p>
         Whether you are evaluating a vendor, adopting new technology,
@@ -601,10 +928,15 @@ footer{
         let's start with a conversation.
       </p>
 
-      <a class="btn primary" href="mailto:contact@victoryit.com">
+      <a
+        class="btn primary"
+        href="mailto:contact@victoryit.com"
+      >
         Email Victory IT
       </a>
+
     </div>
+
 
     <div class="contactdetails">
 
@@ -615,7 +947,9 @@ footer{
 
       <div>
         <small>Website</small>
-        <a href="https://victoryit.com">victoryit.com</a>
+        <a href="https://victoryit.com">
+          victoryit.com
+        </a>
       </div>
 
       <div>
@@ -627,21 +961,34 @@ footer{
 
       <div>
         <small>Focus</small>
-        <strong>Technology Risk & Advisory</strong>
+        <strong>
+          Technology Risk & Advisory
+        </strong>
       </div>
 
     </div>
 
   </div>
+
 </section>
 
 </main>
 
+
 <footer>
+
   <div class="container footerrow">
-    <div>© 2026 Victory IT. All rights reserved.</div>
-    <div>Technology Risk • Cybersecurity • Emerging Technology</div>
+
+    <div>
+      © 2026 Victory IT. All rights reserved.
+    </div>
+
+    <div>
+      Technology Risk • Cybersecurity • Emerging Technology
+    </div>
+
   </div>
+
 </footer>
 
 </body>
