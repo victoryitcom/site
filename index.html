@@ -5,35 +5,868 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Victory IT | Technology Risk & Advisory</title>
 <meta name="description" content="Victory IT provides independent technology risk, cybersecurity, vendor risk, and IT consulting services for organizations navigating complex technology decisions." />
+
 <style>
-:root{--blue:#0874bd;--blue2:#075b96;--ink:#17202a;--muted:#667382;--line:#dfe6ed;--soft:#f5f8fb;--white:#fff;}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--white);line-height:1.55}a{text-decoration:none;color:inherit}.container{width:min(1120px,calc(100% - 44px));margin:auto}
-nav{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(223,230,237,.8);position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);z-index:20}.brand img{height:54px;width:auto;display:block}.navlinks{display:flex;gap:30px;font-size:14px;color:#53606e}.navlinks a:hover{color:var(--blue)}.navcta{padding:11px 17px;border:1px solid var(--ink);border-radius:7px;color:var(--ink)!important}.navcta:hover{background:var(--ink);color:white!important}
-.hero{padding:105px 0 92px;background:radial-gradient(circle at 85% 15%,rgba(8,116,189,.12),transparent 31%),linear-gradient(180deg,#fff 0%,#f8fbfd 100%)}.eyebrow{font-size:13px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--blue);margin-bottom:18px}.hero h1{font-size:clamp(45px,6vw,72px);line-height:1.02;letter-spacing:-.045em;max-width:850px;margin:0 0 25px}.hero h1 span{color:var(--blue)}.hero p{font-size:20px;color:var(--muted);max-width:710px;margin:0 0 35px}.buttons{display:flex;gap:13px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 21px;border-radius:7px;font-weight:700;font-size:15px}.primary{background:var(--blue);color:white;box-shadow:0 7px 20px rgba(8,116,189,.18)}.primary:hover{background:var(--blue2)}.secondary{border:1px solid #c9d3dc;background:white}.secondary:hover{border-color:var(--ink)}
-.trust{padding:28px 0;border-bottom:1px solid var(--line);background:white}.trustrow{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}.trustitem{font-size:12px;color:#7a8793;text-transform:uppercase;letter-spacing:.1em;font-weight:700}
-.section{padding:100px 0}.section.alt{background:var(--soft)}.sectionhead{max-width:700px;margin-bottom:50px}.sectionhead h2{font-size:42px;line-height:1.1;letter-spacing:-.03em;margin:0 0 15px}.sectionhead p{color:var(--muted);font-size:17px;margin:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{border:1px solid var(--line);border-radius:12px;padding:30px;background:white}.icon{width:42px;height:42px;border-radius:9px;background:#e9f5fc;color:var(--blue);display:grid;place-items:center;font-weight:800;margin-bottom:23px}.card h3{margin:0 0 10px;font-size:20px}.card p{color:var(--muted);margin:0;font-size:15px}.card ul{padding-left:18px;color:var(--muted);font-size:14px;margin:18px 0 0}.card li{margin:7px 0}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:75px;align-items:center}.panel{background:#0e1b27;color:white;border-radius:16px;padding:46px;min-height:370px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 20px 50px rgba(15,30,45,.12)}.panel .eyebrow{color:#79c5f2}.panel h3{font-size:33px;line-height:1.1;margin:0 0 16px;letter-spacing:-.025em}.panel p{color:#b7c5d1;margin:0}.quote{border-left:3px solid var(--blue);padding-left:22px;color:#4c5966;font-size:19px}.checklist{display:grid;gap:15px;margin-top:27px}.check{display:flex;gap:12px;align-items:flex-start}.check b{color:var(--blue)}.check span{color:#52606d}
-.ces{background:linear-gradient(135deg,#07131e,#12334a);color:white;border-radius:18px;padding:55px}.ces h2{font-size:42px;line-height:1.08;letter-spacing:-.03em;margin:0 0 15px}.ces p{color:#c0cfda;max-width:700px;font-size:17px}.tag{display:inline-block;margin-top:18px;border:1px solid rgba(255,255,255,.2);padding:9px 13px;border-radius:100px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#d9e7f1}
-.about{display:grid;grid-template-columns:1.1fr .9fr;gap:80px}.about h2{font-size:42px;line-height:1.1;margin:0 0 18px}.about p{color:var(--muted);font-size:17px}.credentials{border-top:1px solid var(--line);margin-top:28px;padding-top:25px}.credentials strong{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:#687581;margin-bottom:8px}.credentials span{color:#4c5966}
-.contact{background:var(--soft)}.contactbox{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.contact h2{font-size:42px;line-height:1.08;margin:0 0 16px}.contact p{color:var(--muted);font-size:17px}.contactdetails{background:white;border:1px solid var(--line);border-radius:13px;padding:30px}.contactdetails div{padding:13px 0;border-bottom:1px solid var(--line)}.contactdetails div:last-child{border-bottom:0}.contactdetails small{display:block;text-transform:uppercase;letter-spacing:.09em;color:#7b8792;font-weight:700;font-size:11px;margin-bottom:3px}.contactdetails a{color:var(--blue);font-weight:700}
-footer{padding:30px 0;color:#7b8792;font-size:13px;border-top:1px solid var(--line)}.footerrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footerlogo{height:35px;width:auto;vertical-align:middle;margin-right:10px}
-@media(max-width:800px){.navlinks{display:none}.cards,.split,.about,.contactbox{grid-template-columns:1fr}.split,.about{gap:40px}.hero{padding:70px 0}.section{padding:70px 0}.ces{padding:35px}.brand img{height:48px}.hero h1{font-size:48px}.sectionhead h2,.about h2,.contact h2,.ces h2{font-size:34px}}
+:root{
+  --blue:#0874bd;
+  --blue2:#075b96;
+  --ink:#17202a;
+  --muted:#667382;
+  --line:#dfe6ed;
+  --soft:#f5f8fb;
+  --white:#fff;
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:var(--ink);
+  background:var(--white);
+  line-height:1.55;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:min(1120px,calc(100% - 44px));
+  margin:auto;
+}
+
+/* Navigation */
+
+nav{
+  height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid rgba(223,230,237,.8);
+  position:sticky;
+  top:0;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(12px);
+  z-index:20;
+}
+
+.brand img{
+  height:54px;
+  width:auto;
+  display:block;
+}
+
+.navlinks{
+  display:flex;
+  gap:30px;
+  font-size:14px;
+  color:#53606e;
+}
+
+.navlinks a:hover{
+  color:var(--blue);
+}
+
+.navcta{
+  padding:11px 17px;
+  border:1px solid var(--ink);
+  border-radius:7px;
+  color:var(--ink)!important;
+}
+
+.navcta:hover{
+  background:var(--ink);
+  color:white!important;
+}
+
+/* Hero */
+
+.hero{
+  padding:105px 0 92px;
+  background:
+    radial-gradient(circle at 85% 15%,rgba(8,116,189,.12),transparent 31%),
+    linear-gradient(180deg,#fff 0%,#f8fbfd 100%);
+}
+
+.eyebrow{
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  color:var(--blue);
+  margin-bottom:18px;
+}
+
+.hero h1{
+  font-size:clamp(45px,6vw,72px);
+  line-height:1.02;
+  letter-spacing:-.045em;
+  max-width:850px;
+  margin:0 0 25px;
+}
+
+.hero h1 span{
+  color:var(--blue);
+}
+
+.hero p{
+  font-size:20px;
+  color:var(--muted);
+  max-width:710px;
+  margin:0 0 35px;
+}
+
+.buttons{
+  display:flex;
+  gap:13px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 21px;
+  border-radius:7px;
+  font-weight:700;
+  font-size:15px;
+}
+
+.primary{
+  background:var(--blue);
+  color:white;
+  box-shadow:0 7px 20px rgba(8,116,189,.18);
+}
+
+.primary:hover{
+  background:var(--blue2);
+}
+
+.secondary{
+  border:1px solid #c9d3dc;
+  background:white;
+}
+
+.secondary:hover{
+  border-color:var(--ink);
+}
+
+/* Trust */
+
+.trust{
+  padding:28px 0;
+  border-bottom:1px solid var(--line);
+  background:white;
+}
+
+.trustrow{
+  display:flex;
+  justify-content:space-between;
+  gap:25px;
+  flex-wrap:wrap;
+}
+
+.trustitem{
+  font-size:12px;
+  color:#7a8793;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  font-weight:700;
+}
+
+/* Sections */
+
+.section{
+  padding:100px 0;
+}
+
+.section.alt{
+  background:var(--soft);
+}
+
+.sectionhead{
+  max-width:700px;
+  margin-bottom:50px;
+}
+
+.sectionhead h2{
+  font-size:42px;
+  line-height:1.1;
+  letter-spacing:-.03em;
+  margin:0 0 15px;
+}
+
+.sectionhead p{
+  color:var(--muted);
+  font-size:17px;
+  margin:0;
+}
+
+/* Service cards */
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.card{
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:30px;
+  background:white;
+}
+
+.icon{
+  width:42px;
+  height:42px;
+  border-radius:9px;
+  background:#e9f5fc;
+  color:var(--blue);
+  display:grid;
+  place-items:center;
+  font-weight:800;
+  margin-bottom:23px;
+}
+
+.card h3{
+  margin:0 0 10px;
+  font-size:20px;
+}
+
+.card p{
+  color:var(--muted);
+  margin:0;
+  font-size:15px;
+}
+
+.card ul{
+  padding-left:18px;
+  color:var(--muted);
+  font-size:14px;
+  margin:18px 0 0;
+}
+
+.card li{
+  margin:7px 0;
+}
+
+/* Approach */
+
+.split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:75px;
+  align-items:center;
+}
+
+.panel{
+  background:#0e1b27;
+  color:white;
+  border-radius:16px;
+  padding:46px;
+  min-height:370px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  box-shadow:0 20px 50px rgba(15,30,45,.12);
+}
+
+.panel .eyebrow{
+  color:#79c5f2;
+}
+
+.panel h3{
+  font-size:33px;
+  line-height:1.1;
+  margin:0 0 16px;
+  letter-spacing:-.025em;
+}
+
+.panel p{
+  color:#b7c5d1;
+  margin:0;
+}
+
+.quote{
+  border-left:3px solid var(--blue);
+  padding-left:22px;
+  color:#4c5966;
+  font-size:19px;
+}
+
+.checklist{
+  display:grid;
+  gap:15px;
+  margin-top:27px;
+}
+
+.check{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+}
+
+.check b{
+  color:var(--blue);
+}
+
+.check span{
+  color:#52606d;
+}
+
+/* About */
+
+.about{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:80px;
+}
+
+.about h2{
+  font-size:42px;
+  line-height:1.1;
+  margin:0 0 18px;
+}
+
+.about p{
+  color:var(--muted);
+  font-size:17px;
+}
+
+.credentials{
+  border-top:1px solid var(--line);
+  margin-top:28px;
+  padding-top:25px;
+}
+
+.credentials strong{
+  display:block;
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  color:#687581;
+  margin-bottom:8px;
+}
+
+.credentials span{
+  color:#4c5966;
+}
+
+/* Contact */
+
+.contact{
+  background:var(--soft);
+}
+
+.contactbox{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.contact h2{
+  font-size:42px;
+  line-height:1.08;
+  margin:0 0 16px;
+}
+
+.contact p{
+  color:var(--muted);
+  font-size:17px;
+}
+
+.contactdetails{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:13px;
+  padding:30px;
+}
+
+.contactdetails div{
+  padding:13px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.contactdetails div:last-child{
+  border-bottom:0;
+}
+
+.contactdetails small{
+  display:block;
+  text-transform:uppercase;
+  letter-spacing:.09em;
+  color:#7b8792;
+  font-weight:700;
+  font-size:11px;
+  margin-bottom:3px;
+}
+
+.contactdetails a{
+  color:var(--blue);
+  font-weight:700;
+}
+
+/* Footer */
+
+footer{
+  padding:30px 0;
+  color:#7b8792;
+  font-size:13px;
+  border-top:1px solid var(--line);
+}
+
+.footerrow{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.footerlogo{
+  height:35px;
+  width:auto;
+  vertical-align:middle;
+  margin-right:10px;
+}
+
+/* Mobile */
+
+@media(max-width:800px){
+
+  nav{
+    height:92px;
+  }
+
+  .navlinks{
+    display:none;
+  }
+
+  .brand img{
+    height:68px;
+  }
+
+  .hero{
+    padding:70px 0;
+  }
+
+  .hero h1{
+    font-size:48px;
+  }
+
+  .section{
+    padding:70px 0;
+  }
+
+  .sectionhead h2,
+  .about h2,
+  .contact h2{
+    font-size:34px;
+  }
+
+  .cards,
+  .split,
+  .about,
+  .contactbox{
+    grid-template-columns:1fr;
+  }
+
+  .split,
+  .about{
+    gap:40px;
+  }
+
+  .panel{
+    padding:35px;
+  }
+}
 </style>
 </head>
+
 <body>
-<nav><div class="container" style="display:flex;align-items:center;justify-content:space-between;width:100%"><a class="brand" href="#top"><img src="victory-it-logo.png" alt="Victory IT"></a><div class="navlinks"><a href="#services">Services</a><a href="#approach">Approach</a><a href="#ces">CES 2027</a><a href="#about">About</a><a class="navcta" href="#contact">Connect</a></div></div></nav>
+
+<nav>
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;width:100%">
+    
+    <a class="brand" href="#top">
+      <img src="victory-it-logo.png" alt="Victory IT">
+    </a>
+
+    <div class="navlinks">
+      <a href="#services">Services</a>
+      <a href="#approach">Approach</a>
+      <a href="#about">About</a>
+      <a class="navcta" href="#contact">Connect</a>
+    </div>
+
+  </div>
+</nav>
+
 <main id="top">
-<section class="hero"><div class="container"><div class="eyebrow">Independent technology advisory</div><h1>Make better technology decisions. <span>With confidence.</span></h1><p>Victory IT helps organizations evaluate technology risk, cybersecurity, third-party vendors, and emerging technology so leaders can move forward with clarity.</p><div class="buttons"><a class="btn primary" href="#contact">Start a conversation</a><a class="btn secondary" href="#services">Explore services</a></div></div></section>
-<section class="trust"><div class="container trustrow"><div class="trustitem">Technology Risk</div><div class="trustitem">Cybersecurity</div><div class="trustitem">Third-Party Risk</div><div class="trustitem">Emerging Technology</div></div></section>
-<section class="section" id="services"><div class="container"><div class="sectionhead"><div class="eyebrow">What Victory IT does</div><h2>Practical expertise for complex technology decisions.</h2><p>Independent consulting focused on understanding the technology, identifying the risk, and giving decision-makers a clear path forward.</p></div><div class="cards">
-<div class="card"><div class="icon">01</div><h3>Technology Risk</h3><p>Assess technology and business processes to identify meaningful risks, control gaps, and practical mitigation opportunities.</p><ul><li>Risk assessments</li><li>Control evaluation</li><li>Risk and remediation planning</li></ul></div>
-<div class="card"><div class="icon">02</div><h3>Third-Party Risk</h3><p>Evaluate vendors, SaaS platforms, applications, and technology providers before and after they become part of the environment.</p><ul><li>Vendor assessments</li><li>Security and compliance review</li><li>Remediation tracking</li></ul></div>
-<div class="card"><div class="icon">03</div><h3>AI & Emerging Technology</h3><p>Help organizations think through the security, privacy, governance, and operational risks that come with adopting new technology.</p><ul><li>AI risk considerations</li><li>Emerging technology review</li><li>Governance and controls</li></ul></div>
-</div></div></section>
-<section class="section alt" id="approach"><div class="container split"><div><div class="eyebrow">The Victory IT approach</div><div class="quote">“Technology moves quickly. Risk decisions shouldn't have to.”</div><div class="checklist"><div class="check"><b>✓</b><span><strong>Independent perspective.</strong> Clear advice without a product to sell.</span></div><div class="check"><b>✓</b><span><strong>Business-minded.</strong> Focus on risk that matters, not paperwork for its own sake.</span></div><div class="check"><b>✓</b><span><strong>Practical outcomes.</strong> Findings translate into actions teams can actually take.</span></div><div class="check"><b>✓</b><span><strong>Built for change.</strong> Designed for environments adopting new platforms, vendors, and AI.</span></div></div></div><div class="panel"><div><div class="eyebrow">A focused advisory practice</div><h3>Senior-level attention without unnecessary layers.</h3><p>Victory IT is intentionally lean, allowing engagements to stay focused, responsive, and close to the actual decision-makers.</p></div><a class="btn primary" href="#contact" style="align-self:flex-start">Discuss your needs</a></div></div></section>
-<section class="section" id="ces"><div class="container"><div class="ces"><div class="eyebrow">CES 2027 • Las Vegas</div><h2>Exploring what comes next in technology.</h2><p>Victory IT will be at CES 2027 connecting with founders, technology companies, security leaders, and executives working on AI, cybersecurity, SaaS, and emerging technology.</p><span class="tag">Technology Risk • AI • Cybersecurity • Emerging Tech</span></div></div></section>
-<section class="section" id="about"><div class="container about"><div><div class="eyebrow">About Victory IT</div><h2>Independent. Experienced. Focused.</h2><p>Victory IT is a boutique technology consulting and advisory practice focused on technology risk, cybersecurity, third-party risk, and emerging technology.</p><p>The practice works directly with organizations that need an experienced perspective on technology decisions, controls, vendors, and risk.</p></div><div class="credentials"><strong>Core areas</strong><span>Technology risk • Third-party risk • Cybersecurity • Vendor assessments • AI and emerging technology • Governance and controls</span><br><br><strong>Engagements</strong><span>Advisory • Assessments • Project-based consulting • Technology reviews</span></div></div></section>
-<section class="section contact" id="contact"><div class="container contactbox"><div><div class="eyebrow">Let's connect</div><h2>Have a technology question?</h2><p>Whether you are evaluating a vendor, adopting new technology, or looking for an independent risk perspective, let's start with a conversation.</p><a class="btn primary" href="mailto:contact@victoryit.com">Email Victory IT</a></div><div class="contactdetails"><div><small>Company</small><strong>Victory IT</strong></div><div><small>Website</small><a href="https://victoryit.com">victoryit.com</a></div><div><small>Email</small><a href="mailto:contact@victoryit.com">contact@victoryit.com</a></div><div><small>Focus</small><strong>Technology Risk & Advisory</strong></div></div></div></section>
+
+<!-- HERO -->
+
+<section class="hero">
+  <div class="container">
+
+    <div class="eyebrow">
+      Independent technology advisory
+    </div>
+
+    <h1>
+      Make better technology decisions.
+      <span>With confidence.</span>
+    </h1>
+
+    <p>
+      Victory IT helps organizations evaluate technology risk,
+      cybersecurity, third-party vendors, and emerging technology
+      so leaders can move forward with clarity.
+    </p>
+
+    <div class="buttons">
+      <a class="btn primary" href="#contact">
+        Start a conversation
+      </a>
+
+      <a class="btn secondary" href="#services">
+        Explore services
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- AREAS -->
+
+<section class="trust">
+  <div class="container trustrow">
+    <div class="trustitem">Technology Risk</div>
+    <div class="trustitem">Cybersecurity</div>
+    <div class="trustitem">Third-Party Risk</div>
+    <div class="trustitem">Emerging Technology</div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+
+<section class="section" id="services">
+  <div class="container">
+
+    <div class="sectionhead">
+
+      <div class="eyebrow">
+        What Victory IT does
+      </div>
+
+      <h2>
+        Practical expertise for complex technology decisions.
+      </h2>
+
+      <p>
+        Independent consulting focused on understanding the technology,
+        identifying the risk, and giving decision-makers a clear path forward.
+      </p>
+
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+
+        <div class="icon">01</div>
+
+        <h3>
+          Technology Risk
+        </h3>
+
+        <p>
+          Assess technology and business processes to identify meaningful
+          risks, control gaps, and practical mitigation opportunities.
+        </p>
+
+        <ul>
+          <li>Risk assessments</li>
+          <li>Control evaluation</li>
+          <li>Risk and remediation planning</li>
+        </ul>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="icon">02</div>
+
+        <h3>
+          Third-Party Risk
+        </h3>
+
+        <p>
+          Evaluate vendors, SaaS platforms, applications, and technology
+          providers before and after they become part of the environment.
+        </p>
+
+        <ul>
+          <li>Vendor assessments</li>
+          <li>Security and compliance review</li>
+          <li>Remediation tracking</li>
+        </ul>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="icon">03</div>
+
+        <h3>
+          AI & Emerging Technology
+        </h3>
+
+        <p>
+          Help organizations think through the security, privacy, governance,
+          and operational risks that come with adopting new technology.
+        </p>
+
+        <ul>
+          <li>AI risk considerations</li>
+          <li>Emerging technology review</li>
+          <li>Governance and controls</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- APPROACH -->
+
+<section class="section alt" id="approach">
+  <div class="container split">
+
+    <div>
+
+      <div class="eyebrow">
+        The Victory IT approach
+      </div>
+
+      <div class="quote">
+        “Technology moves quickly. Risk decisions shouldn't have to.”
+      </div>
+
+      <div class="checklist">
+
+        <div class="check">
+          <b>✓</b>
+          <span>
+            <strong>Independent perspective.</strong>
+            Clear advice without a product to sell.
+          </span>
+        </div>
+
+        <div class="check">
+          <b>✓</b>
+          <span>
+            <strong>Business-minded.</strong>
+            Focus on risk that matters, not paperwork for its own sake.
+          </span>
+        </div>
+
+        <div class="check">
+          <b>✓</b>
+          <span>
+            <strong>Practical outcomes.</strong>
+            Findings translate into actions teams can actually take.
+          </span>
+        </div>
+
+        <div class="check">
+          <b>✓</b>
+          <span>
+            <strong>Built for change.</strong>
+            Designed for environments adopting new platforms, vendors, and AI.
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="panel">
+
+      <div>
+
+        <div class="eyebrow">
+          A focused advisory practice
+        </div>
+
+        <h3>
+          Senior-level attention without unnecessary layers.
+        </h3>
+
+        <p>
+          Victory IT is intentionally lean, allowing engagements to stay
+          focused, responsive, and close to the actual decision-makers.
+        </p>
+
+      </div>
+
+      <a class="btn primary" href="#contact" style="align-self:flex-start">
+        Discuss your needs
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+  <div class="container about">
+
+    <div>
+
+      <div class="eyebrow">
+        About Victory IT
+      </div>
+
+      <h2>
+        Independent. Experienced. Focused.
+      </h2>
+
+      <p>
+        Victory IT is a boutique technology consulting and advisory practice
+        focused on technology risk, cybersecurity, third-party risk,
+        and emerging technology.
+      </p>
+
+      <p>
+        The practice works directly with organizations that need an
+        experienced perspective on technology decisions, controls,
+        vendors, and risk.
+      </p>
+
+    </div>
+
+
+    <div class="credentials">
+
+      <strong>
+        Core areas
+      </strong>
+
+      <span>
+        Technology risk • Third-party risk • Cybersecurity •
+        Vendor assessments • AI and emerging technology •
+        Governance and controls
+      </span>
+
+      <br><br>
+
+      <strong>
+        Engagements
+      </strong>
+
+      <span>
+        Advisory • Assessments • Project-based consulting • Technology reviews
+      </span>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="section contact" id="contact">
+  <div class="container contactbox">
+
+    <div>
+
+      <div class="eyebrow">
+        Let's connect
+      </div>
+
+      <h2>
+        Have a technology question?
+      </h2>
+
+      <p>
+        Whether you are evaluating a vendor, adopting new technology,
+        or looking for an independent risk perspective,
+        let's start with a conversation.
+      </p>
+
+      <a class="btn primary" href="mailto:contact@victoryit.com">
+        Email Victory IT
+      </a>
+
+    </div>
+
+
+    <div class="contactdetails">
+
+      <div>
+        <small>Company</small>
+        <strong>Victory IT</strong>
+      </div>
+
+      <div>
+        <small>Website</small>
+        <a href="https://victoryit.com">
+          victoryit.com
+        </a>
+      </div>
+
+      <div>
+        <small>Email</small>
+        <a href="mailto:contact@victoryit.com">
+          contact@victoryit.com
+        </a>
+      </div>
+
+      <div>
+        <small>Focus</small>
+        <strong>
+          Technology Risk & Advisory
+        </strong>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
 </main>
-<footer><div class="container footerrow"><div><img class="footerlogo" src="victory-it-logo.png" alt="Victory IT">© 2026 Victory IT. All rights reserved.</div><div>Technology Risk • Cybersecurity • Emerging Technology</div></div></footer>
-</body></html>
+
+<footer>
+  <div class="container footerrow">
+
+    <div>
+      <img
+        class="footerlogo"
+        src="victory-it-logo.png"
+        alt="Victory IT"
+      >
+      © 2026 Victory IT. All rights reserved.
+    </div>
+
+    <div>
+      Technology Risk • Cybersecurity • Emerging Technology
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
