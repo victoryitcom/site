@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Victory IT | Technology Risk & Advisory</title>
-<meta name="description" content="Victory IT provides independent technology risk, cybersecurity, vendor risk, and IT consulting services for organizations navigating complex technology decisions." />
+
+<meta name="description" content="Victory IT provides independent technology risk, cybersecurity, third-party risk, and emerging technology advisory services.">
 
 <style>
 :root{
   --blue:#0874bd;
-  --blue2:#075b96;
+  --blue-dark:#075b96;
   --ink:#17202a;
   --muted:#667382;
   --line:#dfe6ed;
@@ -17,15 +19,19 @@
   --white:#fff;
 }
 
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+}
 
-html{scroll-behavior:smooth}
+html{
+  scroll-behavior:smooth;
+}
 
 body{
   margin:0;
-  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-family:Inter,Arial,sans-serif;
   color:var(--ink);
-  background:var(--white);
+  background:#fff;
   line-height:1.55;
 }
 
@@ -34,34 +40,61 @@ a{
   color:inherit;
 }
 
-.container{
+/* =========================
+   FIXED HEADER
+========================= */
+
+.site-header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:82px;
+  z-index:1000;
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(12px);
+}
+
+.header-inner{
   width:min(1120px,calc(100% - 44px));
+  height:100%;
   margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+/* Figure + wordmark */
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  height:100%;
+}
+
+.brand-figure{
+  width:auto;
+  height:58px;
+  display:block;
+  object-fit:contain;
+}
+
+.brand-name{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:27px;
+  line-height:1;
+  letter-spacing:.01em;
+  color:#17649a;
+  white-space:nowrap;
 }
 
 /* Navigation */
 
-nav{
-  height:78px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  border-bottom:1px solid rgba(223,230,237,.8);
-  position:sticky;
-  top:0;
-  background:rgba(255,255,255,.94);
-  backdrop-filter:blur(12px);
-  z-index:20;
-}
-
-.brand img{
-  height:54px;
-  width:auto;
-  display:block;
-}
-
 .navlinks{
   display:flex;
+  align-items:center;
   gap:30px;
   font-size:14px;
   color:#53606e;
@@ -72,18 +105,32 @@ nav{
 }
 
 .navcta{
-  padding:11px 17px;
+  padding:10px 17px;
   border:1px solid var(--ink);
   border-radius:7px;
-  color:var(--ink)!important;
 }
 
 .navcta:hover{
   background:var(--ink);
-  color:white!important;
+  color:#fff!important;
 }
 
-/* Hero */
+/* =========================
+   MAIN
+========================= */
+
+main{
+  padding-top:82px;
+}
+
+.container{
+  width:min(1120px,calc(100% - 44px));
+  margin:auto;
+}
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
   padding:105px 0 92px;
@@ -138,29 +185,31 @@ nav{
 
 .primary{
   background:var(--blue);
-  color:white;
+  color:#fff;
   box-shadow:0 7px 20px rgba(8,116,189,.18);
 }
 
 .primary:hover{
-  background:var(--blue2);
+  background:var(--blue-dark);
 }
 
 .secondary{
   border:1px solid #c9d3dc;
-  background:white;
+  background:#fff;
 }
 
 .secondary:hover{
   border-color:var(--ink);
 }
 
-/* Trust */
+/* =========================
+   FOCUS BAR
+========================= */
 
 .trust{
   padding:28px 0;
   border-bottom:1px solid var(--line);
-  background:white;
+  background:#fff;
 }
 
 .trustrow{
@@ -178,7 +227,9 @@ nav{
   font-weight:700;
 }
 
-/* Sections */
+/* =========================
+   SECTIONS
+========================= */
 
 .section{
   padding:100px 0;
@@ -206,7 +257,9 @@ nav{
   margin:0;
 }
 
-/* Service cards */
+/* =========================
+   SERVICE CARDS
+========================= */
 
 .cards{
   display:grid;
@@ -218,7 +271,7 @@ nav{
   border:1px solid var(--line);
   border-radius:12px;
   padding:30px;
-  background:white;
+  background:#fff;
 }
 
 .icon{
@@ -255,41 +308,15 @@ nav{
   margin:7px 0;
 }
 
-/* Approach */
+/* =========================
+   APPROACH
+========================= */
 
 .split{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:75px;
   align-items:center;
-}
-
-.panel{
-  background:#0e1b27;
-  color:white;
-  border-radius:16px;
-  padding:46px;
-  min-height:370px;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  box-shadow:0 20px 50px rgba(15,30,45,.12);
-}
-
-.panel .eyebrow{
-  color:#79c5f2;
-}
-
-.panel h3{
-  font-size:33px;
-  line-height:1.1;
-  margin:0 0 16px;
-  letter-spacing:-.025em;
-}
-
-.panel p{
-  color:#b7c5d1;
-  margin:0;
 }
 
 .quote{
@@ -319,7 +346,37 @@ nav{
   color:#52606d;
 }
 
-/* About */
+.panel{
+  background:#0e1b27;
+  color:#fff;
+  border-radius:16px;
+  padding:46px;
+  min-height:370px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  box-shadow:0 20px 50px rgba(15,30,45,.12);
+}
+
+.panel .eyebrow{
+  color:#79c5f2;
+}
+
+.panel h3{
+  font-size:33px;
+  line-height:1.1;
+  margin:0 0 16px;
+  letter-spacing:-.025em;
+}
+
+.panel p{
+  color:#b7c5d1;
+  margin:0;
+}
+
+/* =========================
+   ABOUT
+========================= */
 
 .about{
   display:grid;
@@ -340,7 +397,6 @@ nav{
 
 .credentials{
   border-top:1px solid var(--line);
-  margin-top:28px;
   padding-top:25px;
 }
 
@@ -357,7 +413,9 @@ nav{
   color:#4c5966;
 }
 
-/* Contact */
+/* =========================
+   CONTACT
+========================= */
 
 .contact{
   background:var(--soft);
@@ -382,7 +440,7 @@ nav{
 }
 
 .contactdetails{
-  background:white;
+  background:#fff;
   border:1px solid var(--line);
   border-radius:13px;
   padding:30px;
@@ -412,7 +470,9 @@ nav{
   font-weight:700;
 }
 
-/* Footer */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
   padding:30px 0;
@@ -428,27 +488,48 @@ footer{
   flex-wrap:wrap;
 }
 
-.footerlogo{
-  height:35px;
-  width:auto;
-  vertical-align:middle;
-  margin-right:10px;
-}
-
-/* Mobile */
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:800px){
 
-  nav{
-    height:92px;
+  .site-header{
+    height:88px;
+  }
+
+  .header-inner{
+    width:calc(100% - 28px);
+  }
+
+  .brand{
+    gap:8px;
+  }
+
+  /*
+     The figure is intentionally large on mobile.
+     It stays visible while the page scrolls because
+     the entire header is fixed.
+  */
+
+  .brand-figure{
+    height:68px;
+    width:54px;
+    object-fit:contain;
+  }
+
+  .brand-name{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:27px;
+    color:#17649a;
   }
 
   .navlinks{
     display:none;
   }
 
-  .brand img{
-    height:68px;
+  main{
+    padding-top:88px;
   }
 
   .hero{
@@ -457,6 +538,10 @@ footer{
 
   .hero h1{
     font-size:48px;
+  }
+
+  .hero p{
+    font-size:18px;
   }
 
   .section{
@@ -484,380 +569,444 @@ footer{
   .panel{
     padding:35px;
   }
+
+  .trustrow{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+  }
+}
+
+@media(max-width:380px){
+
+  .brand-figure{
+    height:62px;
+    width:49px;
+  }
+
+  .brand-name{
+    font-size:24px;
+  }
+
+  .hero h1{
+    font-size:43px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<nav>
-  <div class="container" style="display:flex;align-items:center;justify-content:space-between;width:100%">
-    
-    <a class="brand" href="#top">
-      <img src="victory-it-logo.png" alt="Victory IT">
+<header class="site-header">
+  <div class="header-inner">
+
+    <a href="#top" class="brand" aria-label="Victory IT home">
+
+      <!-- Put the separate figure image in the ROOT folder -->
+      <img
+        src="victory-figure.png"
+        alt="Victory IT figure"
+        class="brand-figure"
+      >
+
+      <span class="brand-name">Victory IT</span>
+
     </a>
 
-    <div class="navlinks">
+    <nav class="navlinks">
       <a href="#services">Services</a>
       <a href="#approach">Approach</a>
       <a href="#about">About</a>
-      <a class="navcta" href="#contact">Connect</a>
-    </div>
+      <a href="#contact" class="navcta">Connect</a>
+    </nav>
 
   </div>
-</nav>
+</header>
+
 
 <main id="top">
 
-<!-- HERO -->
+  <!-- HERO -->
 
-<section class="hero">
-  <div class="container">
-
-    <div class="eyebrow">
-      Independent technology advisory
-    </div>
-
-    <h1>
-      Make better technology decisions.
-      <span>With confidence.</span>
-    </h1>
-
-    <p>
-      Victory IT helps organizations evaluate technology risk,
-      cybersecurity, third-party vendors, and emerging technology
-      so leaders can move forward with clarity.
-    </p>
-
-    <div class="buttons">
-      <a class="btn primary" href="#contact">
-        Start a conversation
-      </a>
-
-      <a class="btn secondary" href="#services">
-        Explore services
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<!-- AREAS -->
-
-<section class="trust">
-  <div class="container trustrow">
-    <div class="trustitem">Technology Risk</div>
-    <div class="trustitem">Cybersecurity</div>
-    <div class="trustitem">Third-Party Risk</div>
-    <div class="trustitem">Emerging Technology</div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-
-<section class="section" id="services">
-  <div class="container">
-
-    <div class="sectionhead">
+  <section class="hero">
+    <div class="container">
 
       <div class="eyebrow">
-        What Victory IT does
+        Independent technology advisory
       </div>
 
-      <h2>
-        Practical expertise for complex technology decisions.
-      </h2>
+      <h1>
+        Make better technology decisions.
+        <span>With confidence.</span>
+      </h1>
 
       <p>
-        Independent consulting focused on understanding the technology,
-        identifying the risk, and giving decision-makers a clear path forward.
+        Victory IT helps organizations evaluate technology risk,
+        cybersecurity, third-party vendors, and emerging technology
+        so leaders can move forward with clarity.
       </p>
 
-    </div>
+      <div class="buttons">
+        <a class="btn primary" href="#contact">
+          Start a conversation
+        </a>
 
-    <div class="cards">
-
-      <div class="card">
-
-        <div class="icon">01</div>
-
-        <h3>
-          Technology Risk
-        </h3>
-
-        <p>
-          Assess technology and business processes to identify meaningful
-          risks, control gaps, and practical mitigation opportunities.
-        </p>
-
-        <ul>
-          <li>Risk assessments</li>
-          <li>Control evaluation</li>
-          <li>Risk and remediation planning</li>
-        </ul>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="icon">02</div>
-
-        <h3>
-          Third-Party Risk
-        </h3>
-
-        <p>
-          Evaluate vendors, SaaS platforms, applications, and technology
-          providers before and after they become part of the environment.
-        </p>
-
-        <ul>
-          <li>Vendor assessments</li>
-          <li>Security and compliance review</li>
-          <li>Remediation tracking</li>
-        </ul>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="icon">03</div>
-
-        <h3>
-          AI & Emerging Technology
-        </h3>
-
-        <p>
-          Help organizations think through the security, privacy, governance,
-          and operational risks that come with adopting new technology.
-        </p>
-
-        <ul>
-          <li>AI risk considerations</li>
-          <li>Emerging technology review</li>
-          <li>Governance and controls</li>
-        </ul>
-
+        <a class="btn secondary" href="#services">
+          Explore services
+        </a>
       </div>
 
     </div>
+  </section>
 
-  </div>
-</section>
 
-<!-- APPROACH -->
+  <!-- FOCUS -->
 
-<section class="section alt" id="approach">
-  <div class="container split">
+  <section class="trust">
+    <div class="container trustrow">
 
-    <div>
-
-      <div class="eyebrow">
-        The Victory IT approach
+      <div class="trustitem">
+        Technology Risk
       </div>
 
-      <div class="quote">
-        “Technology moves quickly. Risk decisions shouldn't have to.”
+      <div class="trustitem">
+        Cybersecurity
       </div>
 
-      <div class="checklist">
+      <div class="trustitem">
+        Third-Party Risk
+      </div>
 
-        <div class="check">
-          <b>✓</b>
-          <span>
-            <strong>Independent perspective.</strong>
-            Clear advice without a product to sell.
-          </span>
+      <div class="trustitem">
+        Emerging Technology
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SERVICES -->
+
+  <section class="section" id="services">
+
+    <div class="container">
+
+      <div class="sectionhead">
+
+        <div class="eyebrow">
+          What Victory IT does
         </div>
 
-        <div class="check">
-          <b>✓</b>
-          <span>
-            <strong>Business-minded.</strong>
-            Focus on risk that matters, not paperwork for its own sake.
-          </span>
+        <h2>
+          Practical expertise for complex technology decisions.
+        </h2>
+
+        <p>
+          Independent consulting focused on understanding the technology,
+          identifying the risk, and giving decision-makers a clear path forward.
+        </p>
+
+      </div>
+
+
+      <div class="cards">
+
+        <div class="card">
+
+          <div class="icon">01</div>
+
+          <h3>
+            Technology Risk
+          </h3>
+
+          <p>
+            Assess technology and business processes to identify meaningful
+            risks, control gaps, and practical mitigation opportunities.
+          </p>
+
+          <ul>
+            <li>Risk assessments</li>
+            <li>Control evaluation</li>
+            <li>Risk and remediation planning</li>
+          </ul>
+
         </div>
 
-        <div class="check">
-          <b>✓</b>
-          <span>
-            <strong>Practical outcomes.</strong>
-            Findings translate into actions teams can actually take.
-          </span>
+
+        <div class="card">
+
+          <div class="icon">02</div>
+
+          <h3>
+            Third-Party Risk
+          </h3>
+
+          <p>
+            Evaluate vendors, SaaS platforms, applications, and technology
+            providers before and after they become part of the environment.
+          </p>
+
+          <ul>
+            <li>Vendor assessments</li>
+            <li>Security and compliance review</li>
+            <li>Remediation tracking</li>
+          </ul>
+
         </div>
 
-        <div class="check">
-          <b>✓</b>
-          <span>
-            <strong>Built for change.</strong>
-            Designed for environments adopting new platforms, vendors, and AI.
-          </span>
+
+        <div class="card">
+
+          <div class="icon">03</div>
+
+          <h3>
+            AI & Emerging Technology
+          </h3>
+
+          <p>
+            Help organizations think through the security, privacy, governance,
+            and operational risks that come with adopting new technology.
+          </p>
+
+          <ul>
+            <li>AI risk considerations</li>
+            <li>Emerging technology review</li>
+            <li>Governance and controls</li>
+          </ul>
+
         </div>
 
       </div>
 
     </div>
 
+  </section>
 
-    <div class="panel">
+
+  <!-- APPROACH -->
+
+  <section class="section alt" id="approach">
+
+    <div class="container split">
 
       <div>
 
         <div class="eyebrow">
-          A focused advisory practice
+          The Victory IT approach
         </div>
 
-        <h3>
-          Senior-level attention without unnecessary layers.
-        </h3>
+        <div class="quote">
+          “Technology moves quickly. Risk decisions shouldn't have to.”
+        </div>
+
+        <div class="checklist">
+
+          <div class="check">
+            <b>✓</b>
+            <span>
+              <strong>Independent perspective.</strong>
+              Clear advice without a product to sell.
+            </span>
+          </div>
+
+          <div class="check">
+            <b>✓</b>
+            <span>
+              <strong>Business-minded.</strong>
+              Focus on risk that matters, not paperwork for its own sake.
+            </span>
+          </div>
+
+          <div class="check">
+            <b>✓</b>
+            <span>
+              <strong>Practical outcomes.</strong>
+              Findings translate into actions teams can actually take.
+            </span>
+          </div>
+
+          <div class="check">
+            <b>✓</b>
+            <span>
+              <strong>Built for change.</strong>
+              Designed for environments adopting new platforms, vendors,
+              and AI.
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="panel">
+
+        <div>
+
+          <div class="eyebrow">
+            A focused advisory practice
+          </div>
+
+          <h3>
+            Senior-level attention without unnecessary layers.
+          </h3>
+
+          <p>
+            Victory IT is intentionally lean, allowing engagements to stay
+            focused, responsive, and close to the actual decision-makers.
+          </p>
+
+        </div>
+
+        <a
+          class="btn primary"
+          href="#contact"
+          style="align-self:flex-start"
+        >
+          Discuss your needs
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section class="section" id="about">
+
+    <div class="container about">
+
+      <div>
+
+        <div class="eyebrow">
+          About Victory IT
+        </div>
+
+        <h2>
+          Independent. Experienced. Focused.
+        </h2>
 
         <p>
-          Victory IT is intentionally lean, allowing engagements to stay
-          focused, responsive, and close to the actual decision-makers.
+          Victory IT is a boutique technology consulting and advisory practice
+          focused on technology risk, cybersecurity, third-party risk,
+          and emerging technology.
+        </p>
+
+        <p>
+          The practice works directly with organizations that need an
+          experienced perspective on technology decisions, controls,
+          vendors, and risk.
         </p>
 
       </div>
 
-      <a class="btn primary" href="#contact" style="align-self:flex-start">
-        Discuss your needs
-      </a>
 
-    </div>
+      <div class="credentials">
 
-  </div>
-</section>
-
-<!-- ABOUT -->
-
-<section class="section" id="about">
-  <div class="container about">
-
-    <div>
-
-      <div class="eyebrow">
-        About Victory IT
-      </div>
-
-      <h2>
-        Independent. Experienced. Focused.
-      </h2>
-
-      <p>
-        Victory IT is a boutique technology consulting and advisory practice
-        focused on technology risk, cybersecurity, third-party risk,
-        and emerging technology.
-      </p>
-
-      <p>
-        The practice works directly with organizations that need an
-        experienced perspective on technology decisions, controls,
-        vendors, and risk.
-      </p>
-
-    </div>
-
-
-    <div class="credentials">
-
-      <strong>
-        Core areas
-      </strong>
-
-      <span>
-        Technology risk • Third-party risk • Cybersecurity •
-        Vendor assessments • AI and emerging technology •
-        Governance and controls
-      </span>
-
-      <br><br>
-
-      <strong>
-        Engagements
-      </strong>
-
-      <span>
-        Advisory • Assessments • Project-based consulting • Technology reviews
-      </span>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- CONTACT -->
-
-<section class="section contact" id="contact">
-  <div class="container contactbox">
-
-    <div>
-
-      <div class="eyebrow">
-        Let's connect
-      </div>
-
-      <h2>
-        Have a technology question?
-      </h2>
-
-      <p>
-        Whether you are evaluating a vendor, adopting new technology,
-        or looking for an independent risk perspective,
-        let's start with a conversation.
-      </p>
-
-      <a class="btn primary" href="mailto:contact@victoryit.com">
-        Email Victory IT
-      </a>
-
-    </div>
-
-
-    <div class="contactdetails">
-
-      <div>
-        <small>Company</small>
-        <strong>Victory IT</strong>
-      </div>
-
-      <div>
-        <small>Website</small>
-        <a href="https://victoryit.com">
-          victoryit.com
-        </a>
-      </div>
-
-      <div>
-        <small>Email</small>
-        <a href="mailto:contact@victoryit.com">
-          contact@victoryit.com
-        </a>
-      </div>
-
-      <div>
-        <small>Focus</small>
         <strong>
-          Technology Risk & Advisory
+          Core areas
         </strong>
+
+        <span>
+          Technology risk • Third-party risk • Cybersecurity •
+          Vendor assessments • AI and emerging technology •
+          Governance and controls
+        </span>
+
+        <br><br>
+
+        <strong>
+          Engagements
+        </strong>
+
+        <span>
+          Advisory • Assessments • Project-based consulting • Technology reviews
+        </span>
+
       </div>
 
     </div>
 
-  </div>
-</section>
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section class="section contact" id="contact">
+
+    <div class="container contactbox">
+
+      <div>
+
+        <div class="eyebrow">
+          Let's connect
+        </div>
+
+        <h2>
+          Have a technology question?
+        </h2>
+
+        <p>
+          Whether you are evaluating a vendor, adopting new technology,
+          or looking for an independent risk perspective,
+          let's start with a conversation.
+        </p>
+
+        <a
+          class="btn primary"
+          href="mailto:contact@victoryit.com"
+        >
+          Email Victory IT
+        </a>
+
+      </div>
+
+
+      <div class="contactdetails">
+
+        <div>
+          <small>Company</small>
+          <strong>Victory IT</strong>
+        </div>
+
+        <div>
+          <small>Website</small>
+          <a href="https://victoryit.com">
+            victoryit.com
+          </a>
+        </div>
+
+        <div>
+          <small>Email</small>
+          <a href="mailto:contact@victoryit.com">
+            contact@victoryit.com
+          </a>
+        </div>
+
+        <div>
+          <small>Focus</small>
+          <strong>
+            Technology Risk & Advisory
+          </strong>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
 
 </main>
 
+
 <footer>
+
   <div class="container footerrow">
 
     <div>
-      <img
-        class="footerlogo"
-        src="victory-it-logo.png"
-        alt="Victory IT"
-      >
       © 2026 Victory IT. All rights reserved.
     </div>
 
@@ -866,6 +1015,7 @@ footer{
     </div>
 
   </div>
+
 </footer>
 
 </body>
