@@ -1,3 +1,8 @@
+Yes. I changed the header to use the **classic serif style from your reference**, with **VICTORY IT only**, no tagline. The figure stays large, centered, and fixed while scrolling.
+
+Use this as your complete `index.html`, with `victory-figure.png` in the same root folder:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,8 +44,9 @@ a{
   color:inherit;
 }
 
+
 /* =========================
-   FIXED CENTERED HEADER
+   FIXED HEADER
 ========================= */
 
 .site-header{
@@ -48,9 +54,9 @@ a{
   top:0;
   left:0;
   width:100%;
-  height:88px;
+  height:92px;
   z-index:1000;
-  background:rgba(255,255,255,.97);
+  background:rgba(255,255,255,.98);
   border-bottom:1px solid var(--line);
   backdrop-filter:blur(12px);
 }
@@ -67,34 +73,45 @@ a{
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:10px;
+  gap:12px;
   height:100%;
 }
 
+/* Your separate figure file, kept in the ROOT folder */
 .brand-figure{
-  height:68px;
-  width:54px;
+  height:70px;
+  width:auto;
   display:block;
   object-fit:contain;
 }
 
+/*
+   Classic serif wordmark inspired by
+   the logo reference you provided.
+*/
 .brand-name{
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:27px;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    Times,
+    serif;
+
+  font-size:32px;
+  font-weight:700;
+  letter-spacing:.035em;
   line-height:1;
-  letter-spacing:.01em;
   color:#17649a;
   white-space:nowrap;
+  text-transform:uppercase;
 }
 
-/* Navigation intentionally hidden so logo remains centered */
 
-.navlinks{
-  display:none;
-}
+/* =========================
+   MAIN
+========================= */
 
 main{
-  padding-top:88px;
+  padding-top:92px;
 }
 
 .container{
@@ -102,12 +119,14 @@ main{
   margin:auto;
 }
 
+
 /* =========================
    HERO
 ========================= */
 
 .hero{
   padding:105px 0 92px;
+
   background:
     radial-gradient(
       circle at 85% 15%,
@@ -184,6 +203,7 @@ main{
   border-color:var(--ink);
 }
 
+
 /* =========================
    FOCUS BAR
 ========================= */
@@ -208,6 +228,7 @@ main{
   letter-spacing:.1em;
   font-weight:700;
 }
+
 
 /* =========================
    SECTIONS
@@ -238,6 +259,7 @@ main{
   font-size:17px;
   margin:0;
 }
+
 
 /* =========================
    SERVICES
@@ -289,6 +311,7 @@ main{
 .card li{
   margin:7px 0;
 }
+
 
 /* =========================
    APPROACH
@@ -356,6 +379,7 @@ main{
   margin:0;
 }
 
+
 /* =========================
    ABOUT
 ========================= */
@@ -394,6 +418,7 @@ main{
 .credentials span{
   color:#4c5966;
 }
+
 
 /* =========================
    CONTACT
@@ -452,6 +477,7 @@ main{
   font-weight:700;
 }
 
+
 /* =========================
    FOOTER
 ========================= */
@@ -470,6 +496,7 @@ footer{
   flex-wrap:wrap;
 }
 
+
 /* =========================
    MOBILE
 ========================= */
@@ -477,7 +504,7 @@ footer{
 @media(max-width:800px){
 
   .site-header{
-    height:88px;
+    height:94px;
   }
 
   .header-inner{
@@ -485,20 +512,33 @@ footer{
   }
 
   .brand{
-    gap:8px;
+    gap:10px;
   }
 
+  /*
+     Large figure on mobile.
+     Header stays fixed while scrolling.
+  */
+
   .brand-figure{
-    height:68px;
-    width:54px;
+    height:76px;
+    width:auto;
   }
 
   .brand-name{
-    font-size:27px;
+    font-family:
+      Georgia,
+      "Times New Roman",
+      Times,
+      serif;
+
+    font-size:30px;
+    font-weight:700;
+    letter-spacing:.025em;
   }
 
   main{
-    padding-top:88px;
+    padding-top:94px;
   }
 
   .hero{
@@ -546,15 +586,26 @@ footer{
   }
 }
 
+
+/* Small phones */
+
 @media(max-width:380px){
 
+  .site-header{
+    height:88px;
+  }
+
   .brand-figure{
-    height:62px;
-    width:49px;
+    height:68px;
   }
 
   .brand-name{
-    font-size:24px;
+    font-size:25px;
+    letter-spacing:.02em;
+  }
+
+  main{
+    padding-top:88px;
   }
 
   .hero h1{
@@ -564,33 +615,50 @@ footer{
 </style>
 </head>
 
+
 <body>
 
+
+<!-- =========================
+     FIXED LOGO HEADER
+========================= -->
+
 <header class="site-header">
+
   <div class="header-inner">
 
-    <a href="#top" class="brand" aria-label="Victory IT home">
+    <a
+      href="#top"
+      class="brand"
+      aria-label="Victory IT home"
+    >
 
-      <!-- victory-figure.png must be in the ROOT folder -->
       <img
         src="victory-figure.png"
         alt="Victory IT"
         class="brand-figure"
       >
 
-      <span class="brand-name">Victory IT</span>
+      <span class="brand-name">
+        Victory IT
+      </span>
 
     </a>
 
   </div>
+
 </header>
 
 
 <main id="top">
 
-<!-- HERO -->
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
+
   <div class="container">
 
     <div class="eyebrow">
@@ -610,21 +678,30 @@ footer{
 
     <div class="buttons">
 
-      <a class="btn primary" href="#contact">
+      <a
+        class="btn primary"
+        href="#contact"
+      >
         Start a conversation
       </a>
 
-      <a class="btn secondary" href="#services">
+      <a
+        class="btn secondary"
+        href="#services"
+      >
         Explore services
       </a>
 
     </div>
 
   </div>
+
 </section>
 
 
-<!-- FOCUS -->
+<!-- =========================
+     FOCUS AREAS
+========================= -->
 
 <section class="trust">
 
@@ -651,9 +728,14 @@ footer{
 </section>
 
 
-<!-- SERVICES -->
+<!-- =========================
+     SERVICES
+========================= -->
 
-<section class="section" id="services">
+<section
+  class="section"
+  id="services"
+>
 
   <div class="container">
 
@@ -677,9 +759,12 @@ footer{
 
     <div class="cards">
 
+
       <div class="card">
 
-        <div class="icon">01</div>
+        <div class="icon">
+          01
+        </div>
 
         <h3>
           Technology Risk
@@ -701,7 +786,9 @@ footer{
 
       <div class="card">
 
-        <div class="icon">02</div>
+        <div class="icon">
+          02
+        </div>
 
         <h3>
           Third-Party Risk
@@ -723,7 +810,9 @@ footer{
 
       <div class="card">
 
-        <div class="icon">03</div>
+        <div class="icon">
+          03
+        </div>
 
         <h3>
           AI & Emerging Technology
@@ -742,6 +831,7 @@ footer{
 
       </div>
 
+
     </div>
 
   </div>
@@ -749,11 +839,17 @@ footer{
 </section>
 
 
-<!-- APPROACH -->
+<!-- =========================
+     APPROACH
+========================= -->
 
-<section class="section alt" id="approach">
+<section
+  class="section alt"
+  id="approach"
+>
 
   <div class="container split">
+
 
     <div>
 
@@ -765,39 +861,48 @@ footer{
         “Technology moves quickly. Risk decisions shouldn't have to.”
       </div>
 
+
       <div class="checklist">
 
+
         <div class="check">
+
           <b>✓</b>
 
           <span>
             <strong>Independent perspective.</strong>
             Clear advice without a product to sell.
           </span>
+
         </div>
 
 
         <div class="check">
+
           <b>✓</b>
 
           <span>
             <strong>Business-minded.</strong>
             Focus on risk that matters, not paperwork for its own sake.
           </span>
+
         </div>
 
 
         <div class="check">
+
           <b>✓</b>
 
           <span>
             <strong>Practical outcomes.</strong>
             Findings translate into actions teams can actually take.
           </span>
+
         </div>
 
 
         <div class="check">
+
           <b>✓</b>
 
           <span>
@@ -805,7 +910,9 @@ footer{
             Designed for environments adopting new platforms, vendors,
             and AI.
           </span>
+
         </div>
+
 
       </div>
 
@@ -831,6 +938,7 @@ footer{
 
       </div>
 
+
       <a
         class="btn primary"
         href="#contact"
@@ -841,16 +949,23 @@ footer{
 
     </div>
 
+
   </div>
 
 </section>
 
 
-<!-- ABOUT -->
+<!-- =========================
+     ABOUT
+========================= -->
 
-<section class="section" id="about">
+<section
+  class="section"
+  id="about"
+>
 
   <div class="container about">
+
 
     <div>
 
@@ -901,16 +1016,23 @@ footer{
 
     </div>
 
+
   </div>
 
 </section>
 
 
-<!-- CONTACT -->
+<!-- =========================
+     CONTACT
+========================= -->
 
-<section class="section contact" id="contact">
+<section
+  class="section contact"
+  id="contact"
+>
 
   <div class="container contactbox">
+
 
     <div>
 
@@ -940,40 +1062,73 @@ footer{
 
     <div class="contactdetails">
 
-      <div>
-        <small>Company</small>
-        <strong>Victory IT</strong>
-      </div>
 
       <div>
-        <small>Website</small>
+
+        <small>
+          Company
+        </small>
+
+        <strong>
+          Victory IT
+        </strong>
+
+      </div>
+
+
+      <div>
+
+        <small>
+          Website
+        </small>
+
         <a href="https://victoryit.com">
           victoryit.com
         </a>
+
       </div>
 
+
       <div>
-        <small>Email</small>
+
+        <small>
+          Email
+        </small>
+
         <a href="mailto:contact@victoryit.com">
           contact@victoryit.com
         </a>
+
       </div>
 
+
       <div>
-        <small>Focus</small>
+
+        <small>
+          Focus
+        </small>
+
         <strong>
           Technology Risk & Advisory
         </strong>
+
       </div>
 
+
     </div>
+
 
   </div>
 
 </section>
 
+
 </main>
 
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -991,5 +1146,7 @@ footer{
 
 </footer>
 
+
 </body>
 </html>
+```
