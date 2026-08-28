@@ -1,3 +1,30 @@
+<!--
+========================================================
+VICTORY IT WEBSITE
+VERSION: 1.1
+DATE: 2026-08-28
+
+VERSION NOTES:
+- General Victory IT website
+- No CES-specific content
+- Fixed centered Victory IT header
+- Victory figure uses /victory-figure.png
+- Professional serif Victory IT wordmark
+- No tagline under Victory IT
+- Favicon uses /favicon.png and /favicon.ico
+- Four clickable focus areas
+- Technology Risk
+- Cybersecurity
+- Third-Party Risk
+- Emerging Technology
+- Clicking a focus area scrolls to its service card
+- Selected service card pops out and highlights
+- Responsive mobile layout
+- Mobile logo remains fixed while scrolling
+- Mobile focus areas remain clickable
+========================================================
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +46,10 @@
   content="Victory IT provides independent technology risk, cybersecurity, third-party risk, and emerging technology advisory services."
 >
 
-<!-- FAVICON -->
+<!-- =====================================================
+     FAVICON
+===================================================== -->
+
 <link
   rel="icon"
   type="image/png"
@@ -1003,8 +1033,6 @@ footer{
 @media(max-width:800px){
 
 
-  /* Header */
-
   .site-header{
     height:94px;
   }
@@ -1025,6 +1053,7 @@ footer{
     height:76px;
 
     width:auto;
+
   }
 
 
@@ -1041,6 +1070,7 @@ footer{
     font-weight:700;
 
     letter-spacing:.025em;
+
   }
 
 
@@ -1049,7 +1079,7 @@ footer{
   }
 
 
-  /* Hero */
+  /* HERO */
 
   .hero{
     padding:70px 0;
@@ -1066,7 +1096,7 @@ footer{
   }
 
 
-  /* Sections */
+  /* SECTIONS */
 
   .section{
     padding:70px 0;
@@ -1082,14 +1112,16 @@ footer{
   }
 
 
-  /* Cards */
+  /* CARDS */
 
   .cards{
+
     grid-template-columns:1fr;
+
   }
 
 
-  /* Other layouts */
+  /* OTHER LAYOUTS */
 
   .split,
   .about,
@@ -1102,16 +1134,20 @@ footer{
 
   .split,
   .about{
+
     gap:40px;
+
   }
 
 
   .panel{
+
     padding:35px;
+
   }
 
 
-  /* Focus links */
+  /* FOCUS LINKS */
 
   .trustrow{
 
@@ -1150,7 +1186,7 @@ footer{
   }
 
 
-  /* Mobile pop effect */
+  /* MOBILE CARD POP */
 
   .card.card-pop{
 
@@ -1243,7 +1279,7 @@ footer{
 
 
 <!-- =====================================================
-     HEADER
+     FIXED CENTERED BRAND
 ===================================================== -->
 
 <header class="site-header">
@@ -1287,9 +1323,7 @@ footer{
 
 
     <div class="eyebrow">
-
       Independent technology advisory
-
     </div>
 
 
@@ -1432,16 +1466,12 @@ footer{
 
 
       <div class="eyebrow">
-
         What Victory IT does
-
       </div>
 
 
       <h2>
-
         Practical expertise for complex technology decisions.
-
       </h2>
 
 
@@ -1460,7 +1490,9 @@ footer{
     <div class="cards">
 
 
-      <!-- TECHNOLOGY RISK -->
+      <!-- =================================================
+           TECHNOLOGY RISK
+      ================================================== -->
 
       <div
         class="card"
@@ -1505,7 +1537,9 @@ footer{
 
 
 
-      <!-- CYBERSECURITY -->
+      <!-- =================================================
+           CYBERSECURITY
+      ================================================== -->
 
       <div
         class="card"
@@ -1550,7 +1584,9 @@ footer{
 
 
 
-      <!-- THIRD PARTY RISK -->
+      <!-- =================================================
+           THIRD-PARTY RISK
+      ================================================== -->
 
       <div
         class="card"
@@ -1595,7 +1631,9 @@ footer{
 
 
 
-      <!-- EMERGING TECHNOLOGY -->
+      <!-- =================================================
+           EMERGING TECHNOLOGY
+      ================================================== -->
 
       <div
         class="card"
@@ -1663,9 +1701,7 @@ footer{
 
 
       <div class="eyebrow">
-
         The Victory IT approach
-
       </div>
 
 
@@ -1772,9 +1808,7 @@ footer{
 
 
         <div class="eyebrow">
-
           A focused advisory practice
-
         </div>
 
 
@@ -1832,9 +1866,7 @@ footer{
 
 
       <div class="eyebrow">
-
         About Victory IT
-
       </div>
 
 
@@ -1926,16 +1958,12 @@ footer{
 
 
       <div class="eyebrow">
-
         Let's connect
-
       </div>
 
 
       <h2>
-
         Have a technology question?
-
       </h2>
 
 
@@ -2060,7 +2088,7 @@ footer{
 
 
 <!-- =====================================================
-     CLICKABLE CARD ANIMATION
+     CLICKABLE CARD POP ANIMATION
 ===================================================== -->
 
 <script>
@@ -2081,7 +2109,9 @@ document
           !targetId ||
           !targetId.startsWith("#")
         ){
+
           return;
+
         }
 
 
@@ -2090,13 +2120,14 @@ document
 
 
         if(!card){
+
           return;
+
         }
 
 
         /*
-          Remove the previous
-          selected card.
+        Remove previous selected card
         */
 
         document
@@ -2115,11 +2146,12 @@ document
 
 
         /*
-          Wait for the anchor
-          scroll to complete.
+        Let the browser perform
+        the anchor scroll first.
         */
 
         setTimeout(function(){
+
 
           card.classList.add(
             "card-pop"
@@ -2127,8 +2159,8 @@ document
 
 
           /*
-            After the pop animation,
-            leave the card subtly highlighted.
+          Leave the selected card
+          subtly highlighted.
           */
 
           setTimeout(function(){
@@ -2147,6 +2179,42 @@ document
         },100);
 
       }
+
+    );
+
+  });
+
+
+/*
+========================================================
+CLEAR SELECTED CARD WHEN USER CLICKS A DIFFERENT AREA
+========================================================
+*/
+
+document
+  .querySelectorAll("a:not(.trustitem)")
+  .forEach(function(link){
+
+    link.addEventListener(
+      "click",
+      function(){
+
+        document
+          .querySelectorAll(".card")
+          .forEach(function(card){
+
+            card.classList.remove(
+              "card-selected"
+            );
+
+            card.classList.remove(
+              "card-pop"
+            );
+
+          });
+
+      }
+
     );
 
   });
