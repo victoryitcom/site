@@ -1,23 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Victory IT | Technology Risk & Advisory</title>
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
 
-<meta name="description" content="Victory IT provides independent technology risk, cybersecurity, third-party risk, and emerging technology advisory services.">
+<title>
+  Victory IT | Technology Risk & Advisory
+</title>
+
+<meta
+  name="description"
+  content="Victory IT provides independent technology risk, cybersecurity, third-party risk, and emerging technology advisory services."
+>
+
+<!-- FAVICON -->
+<link
+  rel="icon"
+  type="image/png"
+  href="favicon.png"
+>
+
+<link
+  rel="shortcut icon"
+  href="favicon.ico"
+>
+
 
 <style>
 
+/* =====================================================
+   VARIABLES
+===================================================== */
+
 :root{
+
   --blue:#0874bd;
   --blue-dark:#075b96;
+
   --ink:#17202a;
   --muted:#667382;
+
   --line:#dfe6ed;
+
   --soft:#f5f8fb;
+
 }
+
+
+/* =====================================================
+   RESET
+===================================================== */
 
 *{
   box-sizing:border-box;
@@ -28,10 +66,18 @@ html{
 }
 
 body{
+
   margin:0;
-  font-family:Inter,Arial,sans-serif;
+
+  font-family:
+    Inter,
+    Arial,
+    sans-serif;
+
   color:var(--ink);
+
   background:#fff;
+
   line-height:1.55;
 }
 
@@ -46,46 +92,66 @@ a{
 ===================================================== */
 
 .site-header{
+
   position:fixed;
+
   top:0;
   left:0;
+
   width:100%;
+
   height:92px;
+
   z-index:1000;
 
   background:rgba(255,255,255,.98);
-  border-bottom:1px solid var(--line);
+
+  border-bottom:
+    1px solid var(--line);
 
   backdrop-filter:blur(12px);
 }
 
+
 .header-inner{
+
   width:100%;
   height:100%;
 
   display:flex;
+
   align-items:center;
   justify-content:center;
 }
 
+
 .brand{
+
   display:flex;
+
   align-items:center;
   justify-content:center;
 
   gap:12px;
+
   height:100%;
 }
 
+
 .brand-figure{
+
   height:70px;
+
   width:auto;
 
   display:block;
+
   object-fit:contain;
 }
 
+
 .brand-name{
+
   font-family:
     Georgia,
     "Times New Roman",
@@ -93,14 +159,17 @@ a{
     serif;
 
   font-size:32px;
+
   font-weight:700;
 
   letter-spacing:.035em;
+
   line-height:1;
 
   color:#17649a;
 
   white-space:nowrap;
+
   text-transform:uppercase;
 }
 
@@ -113,8 +182,15 @@ main{
   padding-top:92px;
 }
 
+
 .container{
-  width:min(1120px,calc(100% - 44px));
+
+  width:
+    min(
+      1120px,
+      calc(100% - 44px)
+    );
+
   margin:auto;
 }
 
@@ -124,14 +200,20 @@ main{
 ===================================================== */
 
 .hero{
-  padding:105px 0 92px;
+
+  padding:
+    105px
+    0
+    92px;
 
   background:
+
     radial-gradient(
       circle at 85% 15%,
       rgba(8,116,189,.12),
       transparent 31%
     ),
+
     linear-gradient(
       180deg,
       #fff 0%,
@@ -139,11 +221,15 @@ main{
     );
 }
 
+
 .eyebrow{
+
   font-size:13px;
+
   font-weight:700;
 
   letter-spacing:.13em;
+
   text-transform:uppercase;
 
   color:var(--blue);
@@ -151,66 +237,107 @@ main{
   margin-bottom:18px;
 }
 
+
 .hero h1{
-  font-size:clamp(45px,6vw,72px);
+
+  font-size:
+    clamp(
+      45px,
+      6vw,
+      72px
+    );
 
   line-height:1.02;
+
   letter-spacing:-.045em;
 
   max-width:850px;
 
-  margin:0 0 25px;
+  margin:
+    0
+    0
+    25px;
 }
+
 
 .hero h1 span{
   color:var(--blue);
 }
 
+
 .hero p{
+
   font-size:20px;
+
   color:var(--muted);
 
   max-width:710px;
 
-  margin:0 0 35px;
+  margin:
+    0
+    0
+    35px;
 }
 
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
 .buttons{
+
   display:flex;
+
   gap:13px;
+
   flex-wrap:wrap;
 }
 
+
 .btn{
+
   display:inline-flex;
 
   align-items:center;
   justify-content:center;
 
-  padding:14px 21px;
+  padding:
+    14px
+    21px;
 
   border-radius:7px;
 
   font-weight:700;
+
   font-size:15px;
 }
 
+
 .primary{
+
   background:var(--blue);
+
   color:#fff;
 
   box-shadow:
-    0 7px 20px rgba(8,116,189,.18);
+    0 7px 20px
+    rgba(8,116,189,.18);
 }
+
 
 .primary:hover{
   background:var(--blue-dark);
 }
 
+
 .secondary{
-  border:1px solid #c9d3dc;
+
+  border:
+    1px solid #c9d3dc;
+
   background:#fff;
 }
+
 
 .secondary:hover{
   border-color:var(--ink);
@@ -222,14 +349,18 @@ main{
 ===================================================== */
 
 .trust{
+
   padding:0;
 
-  border-bottom:1px solid var(--line);
+  border-bottom:
+    1px solid var(--line);
 
   background:#fff;
 }
 
+
 .trustrow{
+
   display:grid;
 
   grid-template-columns:
@@ -238,17 +369,22 @@ main{
   gap:0;
 }
 
+
 .trustitem{
+
   position:relative;
 
   display:flex;
 
   align-items:center;
+
   justify-content:space-between;
 
   min-height:76px;
 
-  padding:18px 22px;
+  padding:
+    18px
+    22px;
 
   font-size:13px;
 
@@ -260,19 +396,28 @@ main{
 
   font-weight:700;
 
-  border-right:1px solid var(--line);
+  border-right:
+    1px solid var(--line);
 
   transition:
+
     color .2s ease,
+
     background .2s ease,
+
     padding .2s ease;
 }
 
+
 .trustitem:first-child{
-  border-left:1px solid var(--line);
+
+  border-left:
+    1px solid var(--line);
 }
 
+
 .trustitem span{
+
   color:var(--blue);
 
   font-size:18px;
@@ -282,20 +427,28 @@ main{
   transform:translateX(0);
 
   transition:
+
     opacity .2s ease,
+
     transform .2s ease;
 }
 
+
 .trustitem:hover{
+
   color:var(--blue);
 
   background:#f7fafc;
+
 }
 
+
 .trustitem:hover span{
+
   opacity:1;
 
-  transform:translateX(4px);
+  transform:
+    translateX(4px);
 }
 
 
@@ -304,30 +457,43 @@ main{
 ===================================================== */
 
 .section{
-  padding:100px 0;
+
+  padding:
+    100px
+    0;
 }
+
 
 .section.alt{
   background:var(--soft);
 }
 
+
 .sectionhead{
+
   max-width:700px;
 
   margin-bottom:50px;
 }
 
+
 .sectionhead h2{
+
   font-size:42px;
 
   line-height:1.1;
 
   letter-spacing:-.03em;
 
-  margin:0 0 15px;
+  margin:
+    0
+    0
+    15px;
 }
 
+
 .sectionhead p{
+
   color:var(--muted);
 
   font-size:17px;
@@ -341,6 +507,7 @@ main{
 ===================================================== */
 
 .cards{
+
   display:grid;
 
   grid-template-columns:
@@ -349,10 +516,13 @@ main{
   gap:20px;
 }
 
+
 .card{
+
   position:relative;
 
-  border:1px solid var(--line);
+  border:
+    1px solid var(--line);
 
   border-radius:12px;
 
@@ -363,24 +533,34 @@ main{
   scroll-margin-top:115px;
 
   transition:
+
     transform .25s ease,
+
     box-shadow .25s ease,
+
     border-color .25s ease;
 }
 
+
 .card:hover{
-  transform:translateY(-3px);
+
+  transform:
+    translateY(-3px);
 
   box-shadow:
-    0 12px 30px rgba(15,30,45,.08);
+    0 12px 30px
+    rgba(15,30,45,.08);
 
   border-color:#cbd8e2;
 }
 
 
-/* Card pop after clicking focus link */
+/* =====================================================
+   CARD POP EFFECT
+===================================================== */
 
 .card.card-pop{
+
   border-color:var(--blue);
 
   transform:
@@ -388,49 +568,67 @@ main{
     scale(1.025);
 
   box-shadow:
-    0 20px 45px rgba(8,116,189,.18),
-    0 0 0 3px rgba(8,116,189,.08);
+
+    0 20px 45px
+    rgba(8,116,189,.18),
+
+    0 0 0 3px
+    rgba(8,116,189,.08);
 
   animation:
     cardPop .45s ease;
 }
 
 
-/* Keep selected card highlighted */
-
 .card.card-selected{
+
   border-color:var(--blue);
 
   box-shadow:
-    0 12px 32px rgba(8,116,189,.13),
-    0 0 0 2px rgba(8,116,189,.06);
+
+    0 12px 32px
+    rgba(8,116,189,.13),
+
+    0 0 0 2px
+    rgba(8,116,189,.06);
 }
 
 
 @keyframes cardPop{
 
   0%{
+
     transform:
       translateY(0)
       scale(1);
+
   }
 
   45%{
+
     transform:
       translateY(-13px)
       scale(1.035);
+
   }
 
   100%{
+
     transform:
       translateY(-10px)
       scale(1.025);
+
   }
 
 }
 
 
+/* =====================================================
+   CARD ICON
+===================================================== */
+
 .icon{
+
   width:42px;
   height:42px;
 
@@ -449,13 +647,20 @@ main{
   margin-bottom:23px;
 }
 
+
 .card h3{
-  margin:0 0 10px;
+
+  margin:
+    0
+    0
+    10px;
 
   font-size:21px;
 }
 
+
 .card p{
+
   color:var(--muted);
 
   margin:0;
@@ -463,15 +668,21 @@ main{
   font-size:15px;
 }
 
+
 .card ul{
+
   padding-left:18px;
 
   color:var(--muted);
 
   font-size:14px;
 
-  margin:18px 0 0;
+  margin:
+    18px
+    0
+    0;
 }
+
 
 .card li{
   margin:7px 0;
@@ -483,6 +694,7 @@ main{
 ===================================================== */
 
 .split{
+
   display:grid;
 
   grid-template-columns:
@@ -493,7 +705,9 @@ main{
   align-items:center;
 }
 
+
 .quote{
+
   border-left:
     3px solid var(--blue);
 
@@ -504,7 +718,9 @@ main{
   font-size:19px;
 }
 
+
 .checklist{
+
   display:grid;
 
   gap:15px;
@@ -512,7 +728,9 @@ main{
   margin-top:27px;
 }
 
+
 .check{
+
   display:flex;
 
   gap:12px;
@@ -520,15 +738,19 @@ main{
   align-items:flex-start;
 }
 
+
 .check b{
   color:var(--blue);
 }
+
 
 .check span{
   color:#52606d;
 }
 
+
 .panel{
+
   background:#0e1b27;
 
   color:#fff;
@@ -546,24 +768,33 @@ main{
   justify-content:space-between;
 
   box-shadow:
-    0 20px 50px rgba(15,30,45,.12);
+    0 20px 50px
+    rgba(15,30,45,.12);
 }
+
 
 .panel .eyebrow{
   color:#79c5f2;
 }
 
+
 .panel h3{
+
   font-size:33px;
 
   line-height:1.1;
 
-  margin:0 0 16px;
+  margin:
+    0
+    0
+    16px;
 
   letter-spacing:-.025em;
 }
 
+
 .panel p{
+
   color:#b7c5d1;
 
   margin:0;
@@ -575,6 +806,7 @@ main{
 ===================================================== */
 
 .about{
+
   display:grid;
 
   grid-template-columns:
@@ -583,28 +815,39 @@ main{
   gap:80px;
 }
 
+
 .about h2{
+
   font-size:42px;
 
   line-height:1.1;
 
-  margin:0 0 18px;
+  margin:
+    0
+    0
+    18px;
 }
 
+
 .about p{
+
   color:var(--muted);
 
   font-size:17px;
 }
 
+
 .credentials{
+
   border-top:
     1px solid var(--line);
 
   padding-top:25px;
 }
 
+
 .credentials strong{
+
   display:block;
 
   font-size:13px;
@@ -617,6 +860,7 @@ main{
 
   margin-bottom:8px;
 }
+
 
 .credentials span{
   color:#4c5966;
@@ -631,7 +875,9 @@ main{
   background:var(--soft);
 }
 
+
 .contactbox{
+
   display:grid;
 
   grid-template-columns:
@@ -642,42 +888,59 @@ main{
   align-items:center;
 }
 
+
 .contact h2{
+
   font-size:42px;
 
   line-height:1.08;
 
-  margin:0 0 16px;
+  margin:
+    0
+    0
+    16px;
 }
 
+
 .contact p{
+
   color:var(--muted);
 
   font-size:17px;
 }
 
+
 .contactdetails{
+
   background:#fff;
 
-  border:1px solid var(--line);
+  border:
+    1px solid var(--line);
 
   border-radius:13px;
 
   padding:30px;
 }
 
+
 .contactdetails div{
-  padding:13px 0;
+
+  padding:
+    13px
+    0;
 
   border-bottom:
     1px solid var(--line);
 }
 
+
 .contactdetails div:last-child{
   border-bottom:0;
 }
 
+
 .contactdetails small{
+
   display:block;
 
   text-transform:uppercase;
@@ -693,7 +956,9 @@ main{
   margin-bottom:3px;
 }
 
+
 .contactdetails a{
+
   color:var(--blue);
 
   font-weight:700;
@@ -705,7 +970,10 @@ main{
 ===================================================== */
 
 footer{
-  padding:30px 0;
+
+  padding:
+    30px
+    0;
 
   color:#7b8792;
 
@@ -715,7 +983,9 @@ footer{
     1px solid var(--line);
 }
 
+
 .footerrow{
+
   display:flex;
 
   justify-content:space-between;
@@ -732,24 +1002,34 @@ footer{
 
 @media(max-width:800px){
 
+
+  /* Header */
+
   .site-header{
     height:94px;
   }
+
 
   .header-inner{
     width:100%;
   }
 
+
   .brand{
     gap:10px;
   }
 
+
   .brand-figure{
+
     height:76px;
+
     width:auto;
   }
 
+
   .brand-name{
+
     font-family:
       Georgia,
       "Times New Roman",
@@ -763,6 +1043,7 @@ footer{
     letter-spacing:.025em;
   }
 
+
   main{
     padding-top:94px;
   }
@@ -774,9 +1055,11 @@ footer{
     padding:70px 0;
   }
 
+
   .hero h1{
     font-size:48px;
   }
+
 
   .hero p{
     font-size:18px;
@@ -789,10 +1072,13 @@ footer{
     padding:70px 0;
   }
 
+
   .sectionhead h2,
   .about h2,
   .contact h2{
+
     font-size:34px;
+
   }
 
 
@@ -803,18 +1089,22 @@ footer{
   }
 
 
-  /* Other sections */
+  /* Other layouts */
 
   .split,
   .about,
   .contactbox{
+
     grid-template-columns:1fr;
+
   }
+
 
   .split,
   .about{
     gap:40px;
   }
+
 
   .panel{
     padding:35px;
@@ -824,55 +1114,77 @@ footer{
   /* Focus links */
 
   .trustrow{
+
     grid-template-columns:
       1fr 1fr;
+
   }
+
 
   .trustitem{
+
     min-height:65px;
 
-    padding:16px 14px;
+    padding:
+      16px
+      14px;
 
     font-size:11px;
+
   }
+
 
   .trustitem:nth-child(odd){
+
     border-left:
       1px solid var(--line);
+
   }
+
 
   .trustitem:nth-child(even){
+
     border-right:
       1px solid var(--line);
+
   }
 
 
-  /* Smaller pop on phones */
+  /* Mobile pop effect */
 
   .card.card-pop{
+
     transform:
       translateY(-6px)
       scale(1.015);
+
   }
+
 
   @keyframes cardPop{
 
     0%{
+
       transform:
         translateY(0)
         scale(1);
+
     }
 
     45%{
+
       transform:
         translateY(-8px)
         scale(1.02);
+
     }
 
     100%{
+
       transform:
         translateY(-6px)
         scale(1.015);
+
     }
 
   }
@@ -886,27 +1198,35 @@ footer{
 
 @media(max-width:380px){
 
+
   .site-header{
     height:88px;
   }
+
 
   .brand-figure{
     height:68px;
   }
 
+
   .brand-name{
+
     font-size:25px;
 
     letter-spacing:.02em;
+
   }
+
 
   main{
     padding-top:88px;
   }
 
+
   .hero h1{
     font-size:43px;
   }
+
 
   .trustitem{
     font-size:10px;
@@ -915,6 +1235,7 @@ footer{
 }
 
 </style>
+
 </head>
 
 
@@ -922,7 +1243,7 @@ footer{
 
 
 <!-- =====================================================
-     FIXED CENTERED BRAND
+     HEADER
 ===================================================== -->
 
 <header class="site-header">
@@ -952,6 +1273,7 @@ footer{
 </header>
 
 
+
 <main id="top">
 
 
@@ -963,42 +1285,64 @@ footer{
 
   <div class="container">
 
+
     <div class="eyebrow">
+
       Independent technology advisory
+
     </div>
 
+
     <h1>
+
       Make better technology decisions.
-      <span>With confidence.</span>
+
+      <span>
+        With confidence.
+      </span>
+
     </h1>
 
+
     <p>
+
       Victory IT helps organizations evaluate technology risk,
       cybersecurity, third-party vendors, and emerging technology
       so leaders can move forward with clarity.
+
     </p>
 
+
     <div class="buttons">
+
 
       <a
         class="btn primary"
         href="#contact"
       >
+
         Start a conversation
+
       </a>
+
 
       <a
         class="btn secondary"
         href="#services"
       >
+
         Explore services
+
       </a>
 
+
     </div>
+
 
   </div>
 
 </section>
+
 
 
 <!-- =====================================================
@@ -1014,6 +1358,7 @@ footer{
       class="trustitem"
       href="#technology-risk"
     >
+
       Technology Risk
 
       <span>
@@ -1027,6 +1372,7 @@ footer{
       class="trustitem"
       href="#cybersecurity"
     >
+
       Cybersecurity
 
       <span>
@@ -1040,6 +1386,7 @@ footer{
       class="trustitem"
       href="#third-party-risk"
     >
+
       Third-Party Risk
 
       <span>
@@ -1053,6 +1400,7 @@ footer{
       class="trustitem"
       href="#emerging-technology"
     >
+
       Emerging Technology
 
       <span>
@@ -1065,6 +1413,7 @@ footer{
   </div>
 
 </section>
+
 
 
 <!-- =====================================================
@@ -1081,26 +1430,37 @@ footer{
 
     <div class="sectionhead">
 
+
       <div class="eyebrow">
+
         What Victory IT does
+
       </div>
 
+
       <h2>
+
         Practical expertise for complex technology decisions.
+
       </h2>
 
+
       <p>
+
         Independent consulting focused on understanding the technology,
         identifying the risk, and giving decision-makers a clear path forward.
+
       </p>
 
+
     </div>
+
 
 
     <div class="cards">
 
 
-      <!-- Technology Risk -->
+      <!-- TECHNOLOGY RISK -->
 
       <div
         class="card"
@@ -1111,25 +1471,41 @@ footer{
           01
         </div>
 
+
         <h3>
           Technology Risk
         </h3>
 
+
         <p>
+
           Assess technology and business processes to identify meaningful
           risks, control gaps, and practical mitigation opportunities.
+
         </p>
 
+
         <ul>
-          <li>Risk assessments</li>
-          <li>Control evaluation</li>
-          <li>Risk and remediation planning</li>
+
+          <li>
+            Risk assessments
+          </li>
+
+          <li>
+            Control evaluation
+          </li>
+
+          <li>
+            Risk and remediation planning
+          </li>
+
         </ul>
 
       </div>
 
 
-      <!-- Cybersecurity -->
+
+      <!-- CYBERSECURITY -->
 
       <div
         class="card"
@@ -1140,25 +1516,41 @@ footer{
           02
         </div>
 
+
         <h3>
           Cybersecurity
         </h3>
 
+
         <p>
+
           Evaluate cybersecurity risks, controls, and security practices
           to help organizations protect technology and information.
+
         </p>
 
+
         <ul>
-          <li>Security risk assessments</li>
-          <li>Control evaluation</li>
-          <li>Security program reviews</li>
+
+          <li>
+            Security risk assessments
+          </li>
+
+          <li>
+            Control evaluation
+          </li>
+
+          <li>
+            Security program reviews
+          </li>
+
         </ul>
 
       </div>
 
 
-      <!-- Third Party Risk -->
+
+      <!-- THIRD PARTY RISK -->
 
       <div
         class="card"
@@ -1169,25 +1561,41 @@ footer{
           03
         </div>
 
+
         <h3>
           Third-Party Risk
         </h3>
 
+
         <p>
+
           Evaluate vendors, SaaS platforms, applications, and technology
           providers before and after they become part of the environment.
+
         </p>
 
+
         <ul>
-          <li>Vendor assessments</li>
-          <li>Security and compliance review</li>
-          <li>Remediation tracking</li>
+
+          <li>
+            Vendor assessments
+          </li>
+
+          <li>
+            Security and compliance review
+          </li>
+
+          <li>
+            Remediation tracking
+          </li>
+
         </ul>
 
       </div>
 
 
-      <!-- Emerging Technology -->
+
+      <!-- EMERGING TECHNOLOGY -->
 
       <div
         class="card"
@@ -1198,19 +1606,34 @@ footer{
           04
         </div>
 
+
         <h3>
           AI & Emerging Technology
         </h3>
 
+
         <p>
+
           Help organizations think through the security, privacy, governance,
           and operational risks that come with adopting new technology.
+
         </p>
 
+
         <ul>
-          <li>AI risk considerations</li>
-          <li>Emerging technology review</li>
-          <li>Governance and controls</li>
+
+          <li>
+            AI risk considerations
+          </li>
+
+          <li>
+            Emerging technology review
+          </li>
+
+          <li>
+            Governance and controls
+          </li>
+
         </ul>
 
       </div>
@@ -1221,6 +1644,7 @@ footer{
   </div>
 
 </section>
+
 
 
 <!-- =====================================================
@@ -1237,12 +1661,18 @@ footer{
 
     <div>
 
+
       <div class="eyebrow">
+
         The Victory IT approach
+
       </div>
 
+
       <div class="quote">
+
         “Technology moves quickly. Risk decisions shouldn't have to.”
+
       </div>
 
 
@@ -1256,14 +1686,17 @@ footer{
           </b>
 
           <span>
+
             <strong>
               Independent perspective.
             </strong>
 
             Clear advice without a product to sell.
+
           </span>
 
         </div>
+
 
 
         <div class="check">
@@ -1273,14 +1706,17 @@ footer{
           </b>
 
           <span>
+
             <strong>
               Business-minded.
             </strong>
 
             Focus on risk that matters, not paperwork for its own sake.
+
           </span>
 
         </div>
+
 
 
         <div class="check">
@@ -1290,14 +1726,17 @@ footer{
           </b>
 
           <span>
+
             <strong>
               Practical outcomes.
             </strong>
 
             Findings translate into actions teams can actually take.
+
           </span>
 
         </div>
+
 
 
         <div class="check">
@@ -1307,12 +1746,14 @@ footer{
           </b>
 
           <span>
+
             <strong>
               Built for change.
             </strong>
 
             Designed for environments adopting new platforms, vendors,
             and AI.
+
           </span>
 
         </div>
@@ -1323,22 +1764,34 @@ footer{
     </div>
 
 
+
     <div class="panel">
+
 
       <div>
 
+
         <div class="eyebrow">
+
           A focused advisory practice
+
         </div>
 
+
         <h3>
+
           Senior-level attention without unnecessary layers.
+
         </h3>
 
+
         <p>
+
           Victory IT is intentionally lean, allowing engagements to stay
           focused, responsive, and close to the actual decision-makers.
+
         </p>
+
 
       </div>
 
@@ -1348,8 +1801,11 @@ footer{
         href="#contact"
         style="align-self:flex-start"
       >
+
         Discuss your needs
+
       </a>
+
 
     </div>
 
@@ -1357,6 +1813,7 @@ footer{
   </div>
 
 </section>
+
 
 
 <!-- =====================================================
@@ -1373,50 +1830,76 @@ footer{
 
     <div>
 
+
       <div class="eyebrow">
+
         About Victory IT
+
       </div>
 
+
       <h2>
+
         Independent. Experienced. Focused.
+
       </h2>
 
+
       <p>
+
         Victory IT is a boutique technology consulting and advisory practice
         focused on technology risk, cybersecurity, third-party risk,
         and emerging technology.
+
       </p>
 
+
       <p>
+
         The practice works directly with organizations that need an
         experienced perspective on technology decisions, controls,
         vendors, and risk.
+
       </p>
+
 
     </div>
 
 
+
     <div class="credentials">
+
 
       <strong>
         Core areas
       </strong>
 
+
       <span>
+
         Technology risk • Third-party risk • Cybersecurity •
         Vendor assessments • AI and emerging technology •
         Governance and controls
+
       </span>
 
-      <br><br>
+
+      <br>
+      <br>
+
 
       <strong>
         Engagements
       </strong>
 
+
       <span>
-        Advisory • Assessments • Project-based consulting • Technology reviews
+
+        Advisory • Assessments • Project-based consulting •
+        Technology reviews
+
       </span>
+
 
     </div>
 
@@ -1424,6 +1907,7 @@ footer{
   </div>
 
 </section>
+
 
 
 <!-- =====================================================
@@ -1440,28 +1924,42 @@ footer{
 
     <div>
 
+
       <div class="eyebrow">
+
         Let's connect
+
       </div>
 
+
       <h2>
+
         Have a technology question?
+
       </h2>
 
+
       <p>
+
         Whether you are evaluating a vendor, adopting new technology,
         or looking for an independent risk perspective,
         let's start with a conversation.
+
       </p>
+
 
       <a
         class="btn primary"
         href="mailto:contact@victoryit.com"
       >
+
         Email Victory IT
+
       </a>
 
+
     </div>
+
 
 
     <div class="contactdetails">
@@ -1530,6 +2028,7 @@ footer{
 </main>
 
 
+
 <!-- =====================================================
      FOOTER
 ===================================================== -->
@@ -1538,21 +2037,30 @@ footer{
 
   <div class="container footerrow">
 
-    <div>
-      © 2026 Victory IT. All rights reserved.
-    </div>
 
     <div>
-      Technology Risk • Cybersecurity • Emerging Technology
+
+      © 2026 Victory IT.
+      All rights reserved.
+
     </div>
+
+
+    <div>
+
+      Technology Risk • Cybersecurity • Emerging Technology
+
+    </div>
+
 
   </div>
 
 </footer>
 
 
+
 <!-- =====================================================
-     CARD POP INTERACTION
+     CLICKABLE CARD ANIMATION
 ===================================================== -->
 
 <script>
@@ -1561,59 +2069,85 @@ document
   .querySelectorAll(".trustitem")
   .forEach(function(link){
 
-    link.addEventListener("click",function(){
+    link.addEventListener(
+      "click",
+      function(){
 
-      const targetId =
-        this.getAttribute("href");
-
-      if(
-        !targetId ||
-        !targetId.startsWith("#")
-      ){
-        return;
-      }
-
-      const card =
-        document.querySelector(targetId);
-
-      if(!card){
-        return;
-      }
+        const targetId =
+          this.getAttribute("href");
 
 
-      /* Remove previous selection */
-
-      document
-        .querySelectorAll(".card")
-        .forEach(function(item){
-
-          item.classList.remove("card-pop");
-
-          item.classList.remove("card-selected");
-
-        });
+        if(
+          !targetId ||
+          !targetId.startsWith("#")
+        ){
+          return;
+        }
 
 
-      /*
-        Allow the anchor scroll to complete
-        before triggering the animation.
-      */
+        const card =
+          document.querySelector(targetId);
 
-      setTimeout(function(){
 
-        card.classList.add("card-pop");
+        if(!card){
+          return;
+        }
+
+
+        /*
+          Remove the previous
+          selected card.
+        */
+
+        document
+          .querySelectorAll(".card")
+          .forEach(function(item){
+
+            item.classList.remove(
+              "card-pop"
+            );
+
+            item.classList.remove(
+              "card-selected"
+            );
+
+          });
+
+
+        /*
+          Wait for the anchor
+          scroll to complete.
+        */
 
         setTimeout(function(){
 
-          card.classList.remove("card-pop");
+          card.classList.add(
+            "card-pop"
+          );
 
-          card.classList.add("card-selected");
 
-        },450);
+          /*
+            After the pop animation,
+            leave the card subtly highlighted.
+          */
 
-      },100);
+          setTimeout(function(){
 
-    });
+            card.classList.remove(
+              "card-pop"
+            );
+
+            card.classList.add(
+              "card-selected"
+            );
+
+          },450);
+
+
+        },100);
+
+      }
+    );
 
   });
 
@@ -1621,4 +2155,5 @@ document
 
 
 </body>
+
 </html>
